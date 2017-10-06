@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Revamp</title>
+
+    
+</head>
+<body>
+    
+
+    <nav-dir></nav-dir>
+    
+
+    <ui-view></ui-view>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+<script src="./app.js"></script>
+<script src="./navDir.js"></script>
+<script src="./src/components/home/homeCtrl.js"></script>
+<script src="./src/components/home/homeService.js"></script>
+<!-- have to link all ctrl and services in the index.html page like above -->
+
+</html>
