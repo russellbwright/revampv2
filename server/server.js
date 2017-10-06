@@ -11,9 +11,12 @@ const port = 3000;
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
+var corsOptions = {
+    origin: 'http://localhost: 3000'
+};
+app.use(cors(corsOptions));
 app.use(express.static(`${__dirname}/../public`));
-// app.use(express.static(__dirname + '/../public'));
+
 
 
 const massiveConnection = massive(connectionString)

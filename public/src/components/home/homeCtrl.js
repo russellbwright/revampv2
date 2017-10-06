@@ -2,5 +2,8 @@ angular.module('myApp').controller('homeCtrl', function($scope, homeService, $st
 
     $scope.test = homeService.test;
 
-    $scope.users = homeService.users;
+    homeService.users().then(users => {
+        console.log(users)
+        $scope.users = users.data;
+    })
 })
