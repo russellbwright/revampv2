@@ -3,7 +3,7 @@ const massive = require('massive');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const {dbUser, database, dbpass} = require('./config');
+const {dbUser, database, dbpass} = require('../config');
 const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
 
 
@@ -29,10 +29,13 @@ const massiveConnection = massive(connectionString)
 
 
 const usersCtrl = require('./usersCtrl');
+const projectCtrl = require('./projectCtrl');
 
 
 
 app.get('/api/users', usersCtrl.getUsers)
+
+app.get('/api/projects', projectCtrl.getProjects)
 
 
 

@@ -1,9 +1,20 @@
-<div>
-    <h1>Hey this is the Home Page</h1> 
-    {{test}}
+<div class="wholeMainBox">
 
+    <div class="mainTitle"><h1>reVamp</h1> <br> Big Bids Made Easy </div>
     
+    <div class="buttonBox"> <a href="#" class="myButton">Add Project</a></div>
+    
+    <!-- <div ng-repeat="user in users">{{user.name}} - {{user.companyname}}</div> -->
 
-    <div ng-repeat="user in users">{{user.name}} - {{user.companyname}}</div>
+   <div class='projectTitle'>Most Recent Projects</div>
+    <div>
+            
+    <div class="mainViewProjects" ng-repeat="project in projects">
+        
+        {{project.name}} - {{project.company}} </br> 
+        {{project.units}} - {{project.budget}}   <hr>
+    </div>
+</div>
+        
    
 </div>

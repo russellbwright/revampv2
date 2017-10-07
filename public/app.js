@@ -17,6 +17,12 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
             // controller:"loginCtrl"
         })
 
+        .state('projects', {
+            url:'/projects',
+            templateUrl:"./src/components/projectList/projectList.html",
+            controller: "projectCtrl"
+        })
+
         $urlRouterProvider
             .otherwise('/');
 })

@@ -6,7 +6,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Revamp</title>
 
-    
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDut-o_YXqDcLMy-vpVFKERbkWUFWgbTSg",
+        authDomain: "my-awesome-project-c92df.firebaseapp.com",
+        databaseURL: "https://my-awesome-project-c92df.firebaseio.com",
+        projectId: "my-awesome-project-c92df",
+        storageBucket: "",
+        messagingSenderId: "435543260768"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
 </head>
 <body>
     
@@ -26,5 +40,7 @@
 <script src="./src/components/home/homeCtrl.js"></script>
 <script src="./src/components/home/homeService.js"></script>
 <!-- have to link all ctrl and services in the index.html page like above -->
+<script src="./src/components/projectList/projectCtrl.js"></script>
+<script src="./src/components/projectList/projectService.js"></script>
 
 </html>

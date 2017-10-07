@@ -1,4 +1,123 @@
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/*****************************************/
+/* Below is for the Navigation Bar */
+
 .itemBox {
+    font-family: sans-serif;
+    font-weight: bold;
     display: flex;
     justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom:10px;
+    letter-spacing: 1px;
+    
+   
+    
+}
+
+
+.mainNavBox {
+    border-bottom: 2px solid #7BEBFF;
+}
+  
+.navList:hover {
+    text-decoration: underline;
+    text-decoration-color: #EFEFEF;
+    
+}
+
+a:visited { 
+    text-decoration: none;
+    color:#000000;
+    }
+
+a:link {
+    text-decoration: none;
+}
+
+/*****************************************/
+/* Below is for the main HOME Page */
+
+.mainTitle {
+    color: #353535;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    border-bottom: 2px solid #7BEBFF;
+    background-color: #7BEBFF;
+}
+
+.buttonBox {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background-color:#7bebff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:24px;
+	font-weight:bold;
+	padding:19px 63px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.myButton:hover {
+    background-color:#353535;
+    color: white;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.projectTitle {
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+
+
+
+/*****************************************/
+/* Below is for Project List */
+
+.projectBox {
+    padding: 5px;
+    
+}
+
+
+
+
+
+
+
+/*****************************************/
+@media (max-width: 360px){
+    .navList {
+        display: none;
+    }
 }
