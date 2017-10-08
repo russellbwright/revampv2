@@ -34,8 +34,9 @@ const projectCtrl = require('./projectCtrl');
 
 
 app.get('/api/users', usersCtrl.getUsers)
-
 app.get('/api/projects', projectCtrl.getProjects)
+
+app.post('/api/projects', projectCtrl.createProject)
 
 
 

@@ -2,17 +2,17 @@
 
     <div class="mainTitle"><h1>reVamp</h1> <br> Big Bids Made Easy </div>
     
-    <div class="buttonBox"> <a href="#" class="myButton">Add Project</a></div>
+    <div class="buttonBox"> <a ui-sref="addProject" class="myButton">Add Project</a></div>
     
-    <!-- <div ng-repeat="user in users">{{user.name}} - {{user.companyname}}</div> -->
+    
 
    <div class='projectTitle'>Most Recent Projects</div>
     <div>
             
-    <div class="mainViewProjects" ng-repeat="project in projects | orderBy |limitTo:4">
+    <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true |limitTo:4">
         
-         <div class="boldProject">{{project.company}} - {{project.name}}</div>
-         {{project.units}} - {{project.budget}}  <div>{{project.description}}</div> <hr>
+         <div class="boldProject">{{project.company}} </div>
+         Units: {{project.units}} - Budget: {{project.budget}}  <div>Desc: {{project.description}}</div> <hr>
 
     </div>
 </div>

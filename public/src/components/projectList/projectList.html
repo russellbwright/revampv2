@@ -1,5 +1,8 @@
 <div class="mainProjectBox">
-    <div class="projectBox" ng-repeat="project in projects">
-        {{project.company}}-{{project.name}}
+    <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true ">
+        
+         <div class="boldProject">{{project.company}} </div>
+         Units: {{project.units}} - Budget: {{project.budget}}  <div>Desc: {{project.description}}</div> <hr>
+
     </div>
 </div>

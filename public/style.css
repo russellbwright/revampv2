@@ -116,7 +116,13 @@ a:link {
 
 
 
+/*****************************************/
+/* Below is for the adding a project view */
 
+.addTitle {
+    display: flex;
+    justify-content: center;
+}
 
 
 
