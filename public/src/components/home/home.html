@@ -9,10 +9,11 @@
    <div class='projectTitle'>Most Recent Projects</div>
     <div>
             
-    <div class="mainViewProjects" ng-repeat="project in projects">
+    <div class="mainViewProjects" ng-repeat="project in projects | orderBy |limitTo:4">
         
-        {{project.name}} - {{project.company}} </br> 
-        {{project.units}} - {{project.budget}}   <hr>
+         <div class="boldProject">{{project.company}} - {{project.name}}</div>
+         {{project.units}} - {{project.budget}}  <div>{{project.description}}</div> <hr>
+
     </div>
 </div>
         
