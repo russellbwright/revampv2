@@ -11,10 +11,10 @@ const port = 3000;
 const app = express();
 
 app.use(bodyParser.json());
-var corsOptions = {
-    origin: 'http://localhost: 3000'
-};
-app.use(cors(corsOptions));
+// var corsOptions = {
+//     origin: 'http://localhost: 3000'
+// };
+app.use(cors());
 app.use(express.static(`${__dirname}/../public`));
 
 
@@ -33,10 +33,12 @@ const projectCtrl = require('./projectCtrl');
 
 
 
-app.get('/api/users', usersCtrl.getUsers)
-app.get('/api/projects', projectCtrl.getProjects)
+app.get('/api/users', usersCtrl.getUsers);
+app.get('/api/projects', projectCtrl.getProjects);
 
-app.post('/api/projects', projectCtrl.createProject)
+app.post('/api/projects/createProject', projectCtrl.createProject);
+
+app.post('/api/projects', projectCtrl.deleteProject);
 
 
 

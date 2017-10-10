@@ -1,8 +1,8 @@
 <div class="mainProjectBox">
     <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true ">
-        
-         <div class="boldProject">{{project.company}} </div>
-         Units: {{project.units}} - Budget: {{project.budget}}  <div>Desc: {{project.description}}</div> <hr>
+            <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
+         <div class="boldProject">{{project.com_name}} </div>
+         Units: {{project.units}} - Budget: {{project.budget}}  <div>Desc: {{project.short_desc}}</div> <hr>
 
     </div>
 </div>

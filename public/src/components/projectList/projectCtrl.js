@@ -1,8 +1,32 @@
-angular.module('myApp').controller('projectCtrl', function($scope, projectService, $state){
+angular.module('myApp').controller('projectCtrl', function($scope, projectService, $state, $stateParams){
 
-    projectService.projects().then(projects => {
-        console.log(projects)
-        $scope.projects = projects.data;
+    "use strict";
+
+    projectService.projects().then(response => {
+        // console.log(response)
+        $scope.projects = response.data;
     })
+
+    $scope.addProject = (project) => {
+        // console.log(project)
+        projectService.addProject(project)
+            
+    }
+
+    // $scope.deleteProject = (project) => {
+    //     projectService.deleteProject(project).then(response => {
+    //         $scope.projects = reponse.data
+    //     })
+    // }
+
+    $scope.deleteProject = (project) => {
+        // console.log(project.projectid)
+        console.log(project)
+        projectService.deleteProject(project)
+
+        projectService.projects().then(response => {
+            $scope.projects = response.data;
+        })
+    }
 
 })

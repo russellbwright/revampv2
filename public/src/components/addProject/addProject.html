@@ -1,21 +1,24 @@
 <div class='mainAddProjectBox'>
     <div class='addTitle'><div>Add your new Project</div></div>
 
-<form ng-submit="addProject(firstName, lastName, )"
+<form>
 
     <div>
 
-        <input ng-model="firstName" type='text'  placeholder="First Name" class='addInput'>  
-        <input ng-model="lastName" type='text'  placeholder="Last Name" class='addInput'>
+        <input ng-model="project.first" type='text'  placeholder="First Name" class='addInput'/>  
+        <input ng-model="project.last" type='text'  placeholder="Last Name" class='addInput'/>
         
     </div>
+    
+    
 
-        <div>-</div>
+
+<div>-</div>
 
     <div>
 
-            <input ng-model="companyName" type='text'  placeholder="Company Name" class='addInput'>
-            <input ng-model="shortDesc" type='text'  placeholder="Short Description" class='addInput'>
+            <input ng-model="project.company" type='text'  placeholder="Company Name" class='addInput'>
+            <input ng-model="project.shortDesc" type='text'  placeholder="Short Description" class='addInput'>
 
     </div>
 
@@ -23,19 +26,23 @@
 
     <div>
 
-            <input ng-model="units" type='integer'  placeholder="Number of Units" class='addInput'>
-            <input ng-model="type" type='text'  placeholder="Type" class='addInput'>
+            <input ng-model="project.units" type='integer'  placeholder="Number of Units" class='addInput'>
+            <input ng-model="project.type" type='text'  placeholder="Type" class='addInput'>
 
     </div>
 
-        <div>-</div>
+    <button type="submit" class="myButton" ng-click="addProject(project)" >SUBMIT</button>
+</form>
+
+        <!-- <div>-</div>
 
     <div>
 
             <input ng-model="budget" type='integer'  placeholder="Budget" class='addInput'>
-            <input ng-model="longDesc" type='text'  placeholder="Long Description" class='addInput'>
+            <input ng-model="long_desc" type='text'  placeholder="Long Description" class='addInput'>
 
     </div>
 
-    <div class="buttonBox"> <a  class="myButton">SUBMIT</a></div>
+   
+    
 </div>

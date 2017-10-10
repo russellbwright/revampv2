@@ -25,9 +25,17 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
 
         .state('addProject', {
             url:'/addProject',
-            templateUrl:"./src/components/addProject/addProject.html"
+            templateUrl:"./src/components/addProject/addProject.html",
+            controller: "projectCtrl"
+        })
+
+        .state('singleProject', {
+            url:'/singleProject',
+            templateUrl:"./src/components/singleProject/singleProject.html"
         })
 
         $urlRouterProvider
             .otherwise('/');
+
+        
 })
