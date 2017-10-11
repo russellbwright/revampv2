@@ -15,7 +15,7 @@ angular.module('myApp').service('projectService', function($http){
 
     this.singleProject = function(id){
         // console.log(id)
-        return $http.get('/api/projects/singleProject/:id', [id])
+        return $http.get('/api/projects/singleProject/' + id)
      }
 
 })

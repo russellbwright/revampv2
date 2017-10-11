@@ -1,0 +1,50 @@
+[debug] [2017-10-11T18:32:29.334Z] ----------------------------------------------------------------------
+[debug] [2017-10-11T18:32:29.336Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Buck\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2017-10-11T18:32:29.337Z] CLI Version:   3.13.1
+[debug] [2017-10-11T18:32:29.337Z] Platform:      win32
+[debug] [2017-10-11T18:32:29.337Z] Node Version:  v6.11.2
+[debug] [2017-10-11T18:32:29.337Z] Time:          Wed Oct 11 2017 13:32:29 GMT-0500 (Central Daylight Time)
+[debug] [2017-10-11T18:32:29.338Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-11T18:32:29.352Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-10-11T18:32:29.353Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Buck\devmountain\portfolio-projects\personal-project\revampv2\revamp
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2017-10-11T18:37:50.295Z] ----------------------------------------------------------------------
+[debug] [2017-10-11T18:37:50.298Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Buck\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2017-10-11T18:37:50.298Z] CLI Version:   3.13.1
+[debug] [2017-10-11T18:37:50.299Z] Platform:      win32
+[debug] [2017-10-11T18:37:50.299Z] Node Version:  v6.11.2
+[debug] [2017-10-11T18:37:50.299Z] Time:          Wed Oct 11 2017 13:37:50 GMT-0500 (Central Daylight Time)
+[debug] [2017-10-11T18:37:50.299Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-11T18:37:50.318Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-10-11T18:37:50.318Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Buck\DevMountain\portfolio-Projects\personal-project\revampv2\revamp
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+

@@ -39,7 +39,10 @@ a:visited {
 
 a:link {
     text-decoration: none;
+    color: black;
 }
+
+
 
 /*****************************************/
 /* Below is for the main HOME Page */
@@ -165,7 +168,7 @@ a:link {
 
 
 
-/*****************************************/
+/******************************************/
 /* Below is for the adding a project view */
 
 .addTitle {

@@ -13,8 +13,8 @@ $scope.test = "imbad"
 //     })
     
 //    }
-   
-   projectService.singleProject().then(result => {
+   console.log($stateParams.id)
+   projectService.singleProject($stateParams.id).then(result => {
        console.log(result.data)
        $scope.proj = result.data[0];
    })
