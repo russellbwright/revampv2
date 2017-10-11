@@ -36,6 +36,16 @@ module.exports = {
         db.single_project(req.params.id).then(result => 
             res.status(200).json(result))
             
-    }
+    },
+
+    // singleProject: (req,res,next) => {
+    //     const db = req.app.get('db');
+        
+    //     db.single_project(req.body).then(
+    //         (response)  => 
+    //         res.status(200).json(response) 
+    //          ).catch( () => res.status(500).json())
+
+    //            }
 
 }

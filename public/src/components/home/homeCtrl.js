@@ -27,7 +27,6 @@ angular.module('myApp').controller('homeCtrl', function($scope, $location, homeS
 
     // $scope.singleProject = (project) => {
         
-
     //     projectService.singleProject(project).then(response => {
     //         console.log(response.data[0])
     //         return proj = response.data[0];
