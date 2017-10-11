@@ -76,7 +76,7 @@ a:link {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Trebuchet MS;
+	/* Needs a Better Font */
 	font-size:24px;
 	font-weight:bold;
 	padding:19px 63px;

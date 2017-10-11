@@ -1,0 +1,1 @@
+SELECT * FROM projects WHERE projectid = $1

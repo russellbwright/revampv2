@@ -13,11 +13,7 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
             
     }
 
-    // $scope.deleteProject = (project) => {
-    //     projectService.deleteProject(project).then(response => {
-    //         $scope.projects = reponse.data
-    //     })
-    // }
+    
 
     $scope.deleteProject = (project) => {
         // console.log(project.projectid)
@@ -28,5 +24,7 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
             $scope.projects = response.data;
         })
     }
+
+    
 
 })

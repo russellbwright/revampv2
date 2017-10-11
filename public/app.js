@@ -30,8 +30,9 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
         })
 
         .state('singleProject', {
-            url:'/singleProject',
-            templateUrl:"./src/components/singleProject/singleProject.html"
+            url:'/singleProject/:id',
+            templateUrl:"./src/components/singleProject/singleProject.html",
+            controller:"singleProjectCtrl"
         })
 
         $urlRouterProvider

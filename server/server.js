@@ -37,7 +37,7 @@ app.get('/api/users', usersCtrl.getUsers);
 app.get('/api/projects', projectCtrl.getProjects);
 
 app.post('/api/projects/createProject', projectCtrl.createProject);
-
+app.get('/api/projects/singleProject/:projectid', projectCtrl.singleProject);
 app.post('/api/projects', projectCtrl.deleteProject);
 
 

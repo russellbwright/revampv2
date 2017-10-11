@@ -8,6 +8,7 @@ angular.module('myApp').controller('homeCtrl', function($scope, $location, homeS
         $scope.projects = results.data;
     })
 
+
     $scope.deleteProject = (project) => {
         // console.log(project.projectid)
         console.log(project)
@@ -18,8 +19,29 @@ angular.module('myApp').controller('homeCtrl', function($scope, $location, homeS
         })
     }
 
+
     $scope.go = function (path){
         $location.path(path)
     }
+
+
+    // $scope.singleProject = (project) => {
+        
+
+    //     projectService.singleProject(project).then(response => {
+    //         console.log(response.data[0])
+    //         return proj = response.data[0];
+        
+    //     })
+
+    //    }
+
+    //    projectService.singleProject(project).then(response => {
+    //        return $scope.proj = reponse.data[0];
+    //    })
+
+      $scope.test = 'yabad'; 
+
+
     
 })
