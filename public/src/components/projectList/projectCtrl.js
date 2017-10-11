@@ -25,6 +25,16 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
         })
     }
 
+    $scope.submit = function(file) {
+        projectService.uploadImage(file)
+      }
+
+
+    //*******THIS IS WORK TO GET IMAGES*********** */
+    // projectService.images().then(response => {
+    //     console.log(response.data)
+    //     $scope.images = response.data[0];
+    // })
     
 
 })

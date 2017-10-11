@@ -35,12 +35,13 @@ const projectCtrl = require('./projectCtrl');
 
 app.get('/api/users', usersCtrl.getUsers);
 app.get('/api/projects', projectCtrl.getProjects);
+app.get('/api/projects/images', projectCtrl.getImages);
+app.get('/api/projects/singleProject/:id', projectCtrl.singleProject);
 
 app.post('/api/projects/createProject', projectCtrl.createProject);
-app.get('/api/projects/singleProject/:id', projectCtrl.singleProject);
 app.post('/api/projects', projectCtrl.deleteProject);
 
-
+app.post('/api/projects/image', projectCtrl.addimage );
 
 
 

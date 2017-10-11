@@ -1,4 +1,4 @@
-angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRouterProvider){
+angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('home',{
             url:'/',

@@ -38,6 +38,22 @@ module.exports = {
             
     },
 
+    addimage: (req,res,next) => {
+        const db = req.app.get('db');
+
+        db.add_image(req.body).then(response => 
+            res.status(200).json(response)).catch( () => res.status(500).json())
+        
+    },
+
+    getImages: (req,res,next) => {
+        const db = req.app.get('db');
+        
+        db.get_images()
+            .then(images => res.status(200).json(images))
+            .catch( () => res.status(500).json())
+    },
+
     // singleProject: (req,res,next) => {
     //     const db = req.app.get('db');
         
