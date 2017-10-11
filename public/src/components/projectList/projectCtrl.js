@@ -30,7 +30,7 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
       }
 
 
-    //*******THIS IS WORK TO GET IMAGES*********** */
+    //*******THIS IS WORKING TO GET IMAGES*********** */
     // projectService.images().then(response => {
     //     console.log(response.data)
     //     $scope.images = response.data[0];

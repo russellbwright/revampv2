@@ -1,10 +1,22 @@
 <div class="mainProjectBox">
     <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true ">
-            <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
-         <div class="boldProject">{{project.com_name}} </div>
-         Units: {{project.units}} - Budget: {{project.budget}}  <div>Desc: {{project.short_desc}}</div> <hr>
-
-    </div>
+        <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
+        
+                         <a ui-sref="singleProject({id:project.projectid})">
+        
+                    <div class="boldProject" ng-click="singleProject(project)">
+                        {{project.com_name}} 
+                    </div>
+        
+                    <div ng-click="singleProject(project)"> 
+                        Units: {{project.units}} - Budget: {{project.budget}} 
+                    </div>
+                    
+                    <div ng-click="singleProject(project)">
+                        Desc: {{project.short_desc}}
+                    </div> 
+                 </a>
+                 <hr>
 
     <!-- <div>
         <img src="{{images.image_url}}" />
