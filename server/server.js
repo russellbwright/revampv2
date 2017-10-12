@@ -2,22 +2,51 @@ const express = require('express');
 const massive = require('massive');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const session = require('express-session');
 
-const {dbUser, database, dbpass} = require('../config');
+// const passport = require('./passport');
+
+
+const { secret } = require('../config').session;
+const {dbUser, database, dbpass} = require('../config').db;
 const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
 
 
 const port = 3000;
 const app = express();
 
+
+//middlewares
 app.use(bodyParser.json());
 // var corsOptions = {
 //     origin: 'http://localhost: 3000'
 // };
+
 app.use(cors());
 app.use(express.static(`${__dirname}/../public`));
 
 
+
+// *********** Trying to Add Login **************
+// setting up express sessions
+// secret: config.session.secret;
+
+// app.use(session({
+//     secret,
+//     saveUninitialized: true,
+//     resave: true
+//   }));
+
+
+// // setting up passport
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+
+
+
+
+//******* DB Connection *******//
 
 const massiveConnection = massive(connectionString)
 .then(db => {
