@@ -1,5 +1,4 @@
-angular.module('myApp').controller('loginCtrl', function($scope, loginService, $state, authService,
-    headerService){
+angular.module('myApp').controller('loginCtrl', function($scope, projectService, $state, $location){
     
         $scope.login = function() {
             if ($scope.loginForm.$valid) {
@@ -12,8 +11,8 @@ angular.module('myApp').controller('loginCtrl', function($scope, loginService, $
             }
           };
       
-          headerService.setTitle('Login');
-          $scope.error = $stateParams.error;
-        });
+        //   headerService.setTitle('Login');
+        //   $scope.error = $stateParams.error;
+        
 
 })

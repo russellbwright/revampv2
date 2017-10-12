@@ -13,10 +13,9 @@
         <label for="password">Password</label>
         <input type="password" name="password" ng-model="password" required>
         <div ng-messages="loginForm.password.$error">
-            <div ng-message="minlength || required">
-                Passwords must have at least 8 characters.
-            </div>
+            
         </div>
+        
         <button ui-sref="register">Register</md-button>
         <button type="submit" class="" ng-click="requestLogin()" >Log In</button>
     </form>    

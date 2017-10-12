@@ -1,8 +1,8 @@
-angular.module('myApp').service('loginService', function($http){
+// angular.module('myApp').service('loginService', function($http){
 
 
 
 
 
 
-})
+// })
