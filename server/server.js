@@ -50,7 +50,7 @@ app.use(session({
   }));
 
 
-  
+
 // setting up passport
 app.use(passport.initialize());
 app.use(passport.session());
@@ -88,6 +88,13 @@ passport.serializeUser((user, done) => {
     return next();
   };
 
+
+
+
+  
+
+  //************************************************* */
+  //******* AUTH ENDPOINTS */
   app.get('/authcheck', isLoggedIn, (req, res) => res.json(req.user));
   
   app.post('/auth/login', passport.authenticate('local', { failureFlash: true }), (req, res) =>
@@ -97,7 +104,7 @@ passport.serializeUser((user, done) => {
     const db = req.app.get('db');
     bcrypt.hash(req.body.password, 10).then((hash) => {
       db
-        .addUser([req.body.username, hash])
+        .add_user([req.body.username, hash])
         .then(() => passport.authenticate('local'))
         .then(() => res.send(req.session));
     });
@@ -126,6 +133,12 @@ const massiveConnection = massive(connectionString)
 
 const usersCtrl = require('./usersCtrl');
 const projectCtrl = require('./projectCtrl');
+
+
+//*********************** */
+// ENDPOINTS
+
+
 
 
 

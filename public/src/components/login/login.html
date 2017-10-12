@@ -3,7 +3,7 @@
 
     <form>
         <label for="username">Username</label>
-        <input type="text" name="username" ng-model="username" required md-no-asterisk>
+        <input type="text" name="username" ng-model="username" required >
         <div ng-messages="loginForm.username.$error">
             <div ng-message="required">
                 Please enter a username.
@@ -11,7 +11,7 @@
         </div>
 
         <label for="password">Password</label>
-        <input type="password" name="password" ng-model="password" required md-no-asterisk minlength="8">
+        <input type="password" name="password" ng-model="password" required>
         <div ng-messages="loginForm.password.$error">
             <div ng-message="minlength || required">
                 Passwords must have at least 8 characters.

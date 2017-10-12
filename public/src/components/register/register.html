@@ -1,0 +1,25 @@
+<form name="registerForm" ng-submit="register()">
+    <div>
+            <label for="username">Username</label>
+                <input type="text" name="username" ng-model="username" required>
+                    <div ng-messages="loginForm.username.$error">
+                        <div ng-message="required">
+                            Please enter a username.
+                        </div>
+                    </div>
+               
+            <label for="password">Password</label>
+                 <input type="password" name="password" ng-model="password" required>
+                    <div ng-messages="loginForm.password.$error">
+                        <div ng-message="minlength || required">
+                            Passwords must have at least 8 characters.
+                        </div>
+                    </div>
+               
+            
+            
+                <button ng-click="register()">Submit</md-button>
+            
+        
+    </div>
+</form>

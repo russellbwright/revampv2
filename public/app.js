@@ -14,7 +14,7 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         .state('login', {
             url:'/login',
             templateUrl:"./src/components/login/login.html",
-            // controller:"loginCtrl"
+            controller:"loginCtrl"
         })
 
         .state('projects', {
@@ -33,6 +33,12 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
             url:'/singleProject/:id',
             templateUrl:"./src/components/singleProject/singleProject.html",
             controller:"singleProjectCtrl"
+        })
+
+        .state('register', {
+            url:'/register',
+            templateUrl: "./src/components/register/register.html",
+            controller: "registerCtrl"
         })
 
         $urlRouterProvider
