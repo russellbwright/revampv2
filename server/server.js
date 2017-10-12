@@ -91,7 +91,7 @@ passport.serializeUser((user, done) => {
 
 
 
-  
+
 
   //************************************************* */
   //******* AUTH ENDPOINTS */
@@ -102,6 +102,7 @@ passport.serializeUser((user, done) => {
   
   app.post('/auth/register', (req, res) => {
     const db = req.app.get('db');
+    console.log(req.body)
     bcrypt.hash(req.body.password, 10).then((hash) => {
       db
         .add_user([req.body.username, hash])

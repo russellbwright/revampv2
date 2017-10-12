@@ -1,18 +1,18 @@
-angular.module('myApp').controller('loginCtrl', function($scope, projectService, $state, $location){
+angular.module('myApp').controller('loginCtrl', function($scope, projectService, $state, $location, $stateParams){
     
         $scope.login = function() {
             if ($scope.loginForm.$valid) {
-              authService
+                projectService
                 .login($scope.username, $scope.password)
-                .then(response => $state.go('locations'))
+                .then(response => $state.go('home'))
                 .catch(err => ($scope.response = 'Username or password not recognized'));
             } else {
               $scope.loginForm.$setDirty();
             }
           };
       
-        //   headerService.setTitle('Login');
-        //   $scope.error = $stateParams.error;
+          projectService.setTitle('Login');
+          $scope.error = $stateParams.error;
         
 
 })

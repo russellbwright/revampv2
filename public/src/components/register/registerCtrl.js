@@ -1,10 +1,17 @@
 angular
 .module('myApp')
-.controller('registerCtrl', function ($scope, $stateParams, $state, authService) {
+.controller('registerCtrl', function ($scope, $stateParams, $state, projectService) {
+
+    
   $scope.register = function () {
-    authService
+    projectService
+    
       .register($scope.username, $scope.password)
-      .then(response => $state.go('locations'))
+      
+      .then(response =>  
+        
+        $state.go('login'))
+      
       .catch(err => ($scope.response = 'Username or password not recognized'));
   };
 
