@@ -1,3 +1,26 @@
 <div>
     <h3>Hey this is the login page</h3>
+
+    <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" ng-model="username" required md-no-asterisk>
+        <div ng-messages="loginForm.username.$error">
+            <div ng-message="required">
+                Please enter a username.
+            </div>
+        </div>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" ng-model="password" required md-no-asterisk minlength="8">
+        <div ng-messages="loginForm.password.$error">
+            <div ng-message="minlength || required">
+                Passwords must have at least 8 characters.
+            </div>
+        </div>
+        <button ui-sref="register">Register</md-button>
+        <button type="submit" class="" ng-click="requestLogin()" >Log In</button>
+    </form>    
+      
+        
 </div>
+

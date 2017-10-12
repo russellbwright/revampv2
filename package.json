@@ -9,13 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
     "cors": "^2.8.4",
     "express": "^4.16.1",
     "express-session": "^1.15.6",
     "massive": "^4.3.0",
     "passport": "^0.4.0",
-    "passport-auth0": "^0.6.0"
+    "passport-auth0": "^0.6.0",
+    "passport-local": "^1.0.0"
   },
   "repository": {
     "type": "git",
