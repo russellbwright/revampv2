@@ -3,20 +3,15 @@ angular.module('myApp').controller('singleProjectCtrl', function($scope, project
 
 $scope.test = "imbad"
 
-// $scope.singleProject = (id) => {
-    
 
-//     projectService.singleProject(id).then(response => {
-//         console.log(response.data[0])
-//         return $scope.proj = response.data[0];
-    
-//     })
-    
-//    }
+
    console.log($stateParams.id)
    projectService.singleProject($stateParams.id).then(result => {
        console.log(result.data)
        $scope.proj = result.data[0];
    })
+
+
+
 
 })
