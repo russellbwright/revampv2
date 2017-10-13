@@ -58,8 +58,9 @@ angular.module('myApp').service('projectService', function($http, $q){
         this.currentUser = { username: '', type: '' };
         
         this.login = (username, password) =>
+        
           $http.post('/auth/login', { username, password }).then((response) => {
-              console.log(response);
+              
             currentUser = response.data.passport.user;
             that.currentUser.type = response.data.passport.user.type;
             that.currentUser.username = response.data.passport.user.username;

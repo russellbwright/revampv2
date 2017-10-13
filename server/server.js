@@ -57,9 +57,11 @@ app.use(passport.session());
 app.use(flash());
 
 
+// username: user.username, type: user.type, userid: user.id
+
 
 passport.serializeUser((user, done) => {
-    done(null, { username: user.username, type: user.type, userid: user.id });
+    done(null, user);
   });
   passport.deserializeUser((obj, done) => {
     done(null, obj);
@@ -67,7 +69,7 @@ passport.serializeUser((user, done) => {
 
   passport.use(new LocalStrategy(function (username, password, done) {
     const db = app.get('db');
-    db.users.findOne({ username }).then(function (user) {
+    db.users.findOne({ 'username': req.body.user.username }).then(function (user) {
       if (!user) {
         return done(null, false);
       }
@@ -77,6 +79,7 @@ passport.serializeUser((user, done) => {
         return done(null, false);
       }
       return done(null, user);
+      
     });
   }));
 
@@ -95,6 +98,10 @@ passport.serializeUser((user, done) => {
 
   //************************************************* */
   //******* AUTH ENDPOINTS */
+
+
+
+
   app.get('/authcheck', isLoggedIn, (req, res) => res.json(req.user));
   
   app.post('/auth/login', passport.authenticate('local', { failureFlash: true }), (req, res) =>
