@@ -3,7 +3,7 @@
 
     <form>
         <label for="username">Username</label>
-        <input type="text" name="username" ng-model="username" required >
+        <input type="text" name="username" ng-model="log.username" required >
         <div>
             <div>
                Enter Username
@@ -11,13 +11,13 @@
         </div>
 
         <label for="password">Password</label>
-        <input type="password" name="password" ng-model="password" required>
+        <input type="password" name="password" ng-model="log.password" required>
         <div>
             Enter Password
         </div>
         
-        <button ui-sref="register">Register</md-button>
-        <button type="submit" class="" ng-click="login()" >Log In</button>
+        <button ui-sref="register">Register</button>
+        <button type="submit" class="" ng-click="login(log)" >Log In</button>
     </form>    
       
         

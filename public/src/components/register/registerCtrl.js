@@ -3,17 +3,15 @@ angular
 .controller('registerCtrl', function ($scope, $stateParams, $state, projectService) {
 
     
-  $scope.register = function () {
+  $scope.register = function (user) {
     projectService
     
-      .register($scope.username, $scope.password)
+      .createUser(user)
       
-      .then(response =>  
-        
-        $state.go('login'))
+      $state.go('login')
       
-      .catch(err => ($scope.response = 'Username or password not recognized'));
+      
   };
 
-  $scope.error = $stateParams.error;
+  
 });

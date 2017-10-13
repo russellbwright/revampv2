@@ -1,14 +1,20 @@
+
+
+
+  
+
 angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('home',{
             url:'/',
             templateUrl:"./src/components/home/home.html",
             controller:"homeCtrl",
-            // resolve: {
-            //     user: homeService => homeService.users()
-            //         .then(response => response.data)
-            //         .catch(err => err)
-            // }
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
         })
 
         .state('login', {

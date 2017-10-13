@@ -50,43 +50,100 @@ angular.module('myApp').service('projectService', function($http, $q){
 
 
 
+
+
+
+
+
+
+
+
     //************************************************************ */
         //AUTH*****************
 
-        let currentUser;
-        const that = this;
-        this.currentUser = { username: '', type: '' };
+        // let currentUser;
+        // const that = this;
+        // this.currentUser = { username: '', type: '' };
+
+
+
+
         
-        this.login = (username, password) =>
+        // this.login = (username, password) =>
         
-          $http.post('/auth/login', { username, password }).then((response) => {
+        //   $http.post('/auth/login', { username, password }).then((response) => {
               
-            currentUser = response.data.passport.user;
-            that.currentUser.type = response.data.passport.user.type;
-            that.currentUser.username = response.data.passport.user.username;
-          });
-        this.register = (username, password) => $http.post('/auth/register', { username, password });
-        this.logout = () => $http.get('/auth/logout');
-        this.getCurrentUser = function () {
-          const defer = $q.defer();
-          if (!currentUser) {
-            $http
-              .get('/authcheck')
-              .then((response) => {
-                currentUser = response.data;
+        //     currentUser = response.data.passport.user;
+        //     that.currentUser.type = response.data.passport.user.type;
+        //     that.currentUser.username = response.data.passport.user.username;
+        //   });
+
+
+
+
+        // this.register = (username, password) => $http.post('/auth/register', { username, password });
+
+
+
+
+        // this.logout = () => $http.get('/auth/logout');
+
+
+
+
+        // this.getCurrentUser = function () {
+        //   const defer = $q.defer();
+        //   if (!currentUser) {
+        //     $http
+        //       .get('/authcheck')
+        //       .then((response) => {
+        //         currentUser = response.data;
       
-                that.currentUser.type = response.data.type;
-                that.currentUser.username = response.data.username;
-                console.log('that', that.currentUser);
+        //         that.currentUser.type = response.data.type;
+        //         that.currentUser.username = response.data.username;
+        //         console.log('that', that.currentUser);
       
-                defer.resolve(currentUser);
-              })
-              .catch(err => defer.resolve());
-          } else {
-            defer.resolve(currentUser);
-          }
-          return defer.promise;
-        };    
+        //         defer.resolve(currentUser);
+        //       })
+        //       .catch(err => defer.resolve());
+        //   } else {
+        //     defer.resolve(currentUser);
+        //   }
+        //   return defer.promise;
+        // };    
+
+
+//***********************      NEW AUTH           ****************************************** */
+
+        this.createUser = (user) => {
+          
+          $http.post('/api/users/create', [user.username, user.password])
+          .then(response=>response);
+  }
+
+
+  this.login = (user)=>{
+    
+    return $http.post('/api/login', user)
+        .then((res)=>{
+        if (!res.data.user){
+            return 'Either Username or Password are wrong';
+        }
+          console.log(res.data.user)
+          return res.data.user;                
+        });
+  }
+
+
+  this.logOut = ()=>{
+     return $http.get('/logout');
+  }
+
+  this.getUser = () => $http.get('/authcheck');
+
+
+
+
 
         ///****************************** */
 
