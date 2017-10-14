@@ -35,14 +35,6 @@ app.use(express.static(`${__dirname}/../public`));
 
 
 
-
-
-
-// *********** Trying to Add Login **************
-// setting up express sessions
-
-
-
 app.use(session({
     secret,
     saveUninitialized: true,
@@ -57,8 +49,6 @@ app.use(passport.session());
 app.use(flash());
 
 
-// username: user.username, type: user.type, userid: user.id
-
 
 passport.serializeUser((user, done) => {
     done(null, user);
@@ -68,27 +58,6 @@ passport.serializeUser((user, done) => {
   });
 
   
-  //    passport.use(new LocalStrategy(function (username, password, done) {
-  //     const db = app.get('db')
-  //     // console.log(db)
-  //   db.users.findOne({ username }).then(function (user) {
-  //     if (!user) {
-  //       return done(null, false);
-  //     }
-  //     const authenticated = bcrypt.compareSync(password, user.password);
-  
-  //     if (!authenticated) {
-  //       return done(null, false);
-  //     }
-  //     return done(null, user);
-      
-  //   });
-  // }));
-
-
-
-
-
 
 //   passport.use(new LocalStrategy(function (username, password, done) {
 //     const db = app.get('db')
@@ -108,15 +77,6 @@ passport.serializeUser((user, done) => {
 //   });
 // }));
 
-//   const isLoggedIn = function (req, res, next) {
-//     if (!req.user) {
-//       console.log('not logged in');
-//       return res.status(401).json('not logged in');
-//     }
-//     return next();
-//   };
-
-
 
 
 
@@ -126,11 +86,6 @@ passport.serializeUser((user, done) => {
 
 
 
-
-//   app.get('/authcheck', isLoggedIn, (req, res) => res.json(req.user));
-  
-//   app.post('/auth/login', passport.authenticate('local', { failureFlash: true }), (req, res) =>
-//     res.send(req.session));
   
 //   app.post('/auth/register', (req, res) => {
 //     const db = req.app.get('db');
@@ -144,17 +99,6 @@ passport.serializeUser((user, done) => {
 //   });
 
 
-//   app.post('/api/users/create', (req, res, next)=> {
-//     const db = req.app.get('db');
-   
-//     const username = req.body.username;
-//     const password = req.body.password;
-//     const firstName = req.body.first_name;
-//     const lastName = req.body.last_name;
-//     db.createProfile([username, password, firstName, lastName]).then((users)=>{
-//         res.send(users);
-//     });
-// });
 
   
 //   app.get('/auth/logout', (req, res) => {
@@ -172,6 +116,18 @@ passport.serializeUser((user, done) => {
 
 
 //***************************        NEW AUTH              */
+
+app.post('/api/users/create', (req, res, next)=> {
+  const db = req.app.get('db');
+ console.log(req.body)
+  
+  db.add_user(req.body).then((users)=>{
+      res.send(users);
+  });
+});
+
+
+
 app.post('/api/login', (req, res, next)=>{
   const username = req.body.username;
   const password = req.body.password;
@@ -191,19 +147,6 @@ app.post('/api/login', (req, res, next)=>{
   })
 });
 
-app.get('/logout', (req, res, next)=>{
-  req.session.user = null;
-  res.redirect('/');
-});
-
-app.post('/api/users/create', (req, res, next)=> {
-  const db = req.app.get('db');
- console.log(req.body)
-  
-  db.add_user(req.body).then((users)=>{
-      res.send(users);
-  });
-});
 
 
 app.get('/authcheck', (req, res) => {
@@ -212,6 +155,11 @@ app.get('/authcheck', (req, res) => {
 });
 
 
+
+app.get('/logout', (req, res, next)=>{
+  req.session.user = null;
+  res.redirect('/');
+});
 
 
 
@@ -252,7 +200,7 @@ app.post('/api/projects/createProject', projectCtrl.createProject);
 app.post('/api/projects', projectCtrl.deleteProject);
 
 app.post('/api/projects/image', projectCtrl.addimage );
-
+app.post('/api/projects/myProjects', projectCtrl.myProjects);
 
 
 

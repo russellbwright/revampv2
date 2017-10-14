@@ -1,8 +1,3 @@
-
-
-
-  
-
 angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('home',{
@@ -26,25 +21,67 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         .state('projects', {
             url:'/projects',
             templateUrl:"./src/components/projectList/projectList.html",
-            controller: "projectCtrl"
+            controller: "projectCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
         })
 
         .state('addProject', {
             url:'/addProject',
             templateUrl:"./src/components/addProject/addProject.html",
-            controller: "projectCtrl"
+            controller: "projectCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
         })
 
         .state('singleProject', {
             url:'/singleProject/:id',
             templateUrl:"./src/components/singleProject/singleProject.html",
-            controller:"singleProjectCtrl"
+            controller:"singleProjectCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
         })
 
         .state('register', {
             url:'/register',
             templateUrl: "./src/components/register/register.html",
             controller: "registerCtrl"
+        })
+
+        .state('myProjects', {
+            url:'/myprojects',
+            templateUrl: "./src/components/myProjects/myProjects.html",
+            controller: "myProjectsCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
+        })
+
+        .state('createBid', {
+            url:'/createBid',
+            templateUrl: "./src/components/createBid/createBid.html",
+            controller: "createBidCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
         })
 
         $urlRouterProvider

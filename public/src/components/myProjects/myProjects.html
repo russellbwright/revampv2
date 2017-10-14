@@ -1,0 +1,18 @@
+<div ng-repeat="project in myProjects">
+<a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
+
+                 <a ui-sref="singleProject({id:project.projectid})">
+
+            <div class="boldProject" ng-click="singleProject(project)">
+                {{project.com_name}} 
+            </div>
+
+            <div ng-click="singleProject(project)"> 
+                Units: {{project.units}} - Budget: {{project.budget}} 
+            </div>
+            
+            <div ng-click="singleProject(project)">
+                Desc: {{project.short_desc}}
+            </div> 
+         </a>
+</div>         

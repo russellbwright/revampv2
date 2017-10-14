@@ -3,9 +3,10 @@ angular.module('myApp').service('projectService', function($http, $q){
     this.projects = () => $http.get('/api/projects')
 
 
-    this.addProject = function(project){
-        console.log(project)
-        return $http.post('/api/projects/createProject', [project.last, project.first, project.company, project.units, project.shortDesc, project.type])
+    this.addProject = function(project, userid){
+        // console.log(project)
+        
+        return $http.post('/api/projects/createProject', [project.last, project.first, project.company, project.units, project.shortDesc, project.type, userid.userid])
     }, 
 
     this.deleteProject = function(project){
@@ -45,7 +46,7 @@ angular.module('myApp').service('projectService', function($http, $q){
     this.getUsers = () => $http.get('/api/users').then(response => response.data);
 
 
-
+    this.myProjects = (userid) => $http.post('/api/projects/myProjects', [userid.userid])
 
 
 

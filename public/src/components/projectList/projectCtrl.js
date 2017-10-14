@@ -1,6 +1,6 @@
-angular.module('myApp').controller('projectCtrl', function($scope, projectService, $state, $stateParams){
+angular.module('myApp').controller('projectCtrl', function($scope, projectService, $state, user, $stateParams){
 
-    "use strict";
+    // "use strict";
 
     projectService.projects().then(response => {
         // console.log(response)
@@ -9,7 +9,7 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
 
     $scope.addProject = (project) => {
         // console.log(project)
-        projectService.addProject(project)
+        projectService.addProject(project, user)
             
     }
 
