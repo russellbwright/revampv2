@@ -4,6 +4,9 @@ body {
     padding: 0;
   }
 
+.testFooter{
+    height: 25px;
+}
 
 /*****************************************/
 /* Below is for the Navigation Bar */
@@ -145,6 +148,36 @@ a:link {
 
 /***********************************************************************************************/
 
+/********************************** BID BUTTON */
+
+.bidButton {
+	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background-color:#7bebff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* Needs a Better Font */
+	font-size:24px;
+	font-weight:bold;
+	padding:9px 63px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.bidButton:hover {
+    background-color:#353535;
+    color: white;
+}
+.bidButton:active {
+	position:relative;
+	top:1px;
+}
+
 
 
 
@@ -172,6 +205,7 @@ a:link {
 
 
 
+
 /******************************************/
 /* Below is for the adding a project view */
 
@@ -182,7 +216,99 @@ a:link {
 
 
 
-/*****************************************/
+/*********************** SINGLE PROJECT PAGE */
+
+
+.singleProjectTitleBox {
+
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+
+}
+
+.singleProjectCompanyName{
+
+    font-size: 30px;
+    /* font-weight: bold; */
+
+}
+
+.mainImgDivBox{
+    border: 2px solid black;
+    /* float: left; */
+    height: 400px;
+    width: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 7%;
+    margin-right: 5%;
+    
+}
+
+.singleImgBox{
+    margin: auto;
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+
+
+}
+
+.imgbox{
+
+
+
+}
+
+
+
+.test{
+    font-size: 60px;
+}
+
+
+.mainInfoDivBox{
+    border: 2px solid black;
+    height: 400px;
+    width: 50%;
+    margin-right: 7%;
+}
+
+.singleProjectMainBox{
+    
+}
+
+.singleProjectBigTopBox{
+
+    display: flex;
+    
+}
+
+.longDescBox{
+    border: 2px solid black;
+    margin-left: 7%;
+    margin-top: 4%;
+    margin-right: 7%;
+    height: 200px;
+}
+
+.secondInfoBox{
+    
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top:4%;
+    border: 2px solid black; 
+}
+
+
+
+
+
+
+/****************************************     Responsive         */
 @media (max-width: 360px){
     .navList {
         display: none;
