@@ -32,7 +32,7 @@ module.exports = {
     
     singleProject: (req,res,next) => {
         const db = req.app.get('db');
-       console.log(+req.params.id)
+       
         db.single_project(+req.params.id).then(result => 
             res.status(200).json(result)).catch( () => res.status(500).json())
             
@@ -61,6 +61,15 @@ module.exports = {
             (response) => res.status(200).json(response) )
             .catch( ()=> res.status(500).json() )
         
+    },
+
+    addBid: (req,res,next) => {
+        const db = req.app.get('db');
+        console.log(req.body)
+        db.add_bid(req.body).then( 
+            () => 
+            res.status(200).json() )
+            .catch( () => res.status(500).json() )
     }
 
     // singleProject: (req,res,next) => {

@@ -40,7 +40,7 @@ angular.module('myApp').service('projectService', function($http, $q){
     
     },
 
-    this.images = () => $http.get('/api/projects/images'),
+    this.images = () => $http.get('/api/projects/images');
 
 
     this.getUsers = () => $http.get('/api/users').then(response => response.data);
@@ -49,69 +49,13 @@ angular.module('myApp').service('projectService', function($http, $q){
     this.myProjects = (userid) => $http.post('/api/projects/myProjects', [userid.userid])
 
 
+    this.addBid = function(bid, userid, proid){
+       
+       $http.post('/api/bids/newBid', [bid.company, bid.myBid, userid.userid, proid.projectid])
+    }
 
 
 
-
-
-
-
-
-
-
-    //************************************************************ */
-        //AUTH*****************
-
-        // let currentUser;
-        // const that = this;
-        // this.currentUser = { username: '', type: '' };
-
-
-
-
-        
-        // this.login = (username, password) =>
-        
-        //   $http.post('/auth/login', { username, password }).then((response) => {
-              
-        //     currentUser = response.data.passport.user;
-        //     that.currentUser.type = response.data.passport.user.type;
-        //     that.currentUser.username = response.data.passport.user.username;
-        //   });
-
-
-
-
-        // this.register = (username, password) => $http.post('/auth/register', { username, password });
-
-
-
-
-        // this.logout = () => $http.get('/auth/logout');
-
-
-
-
-        // this.getCurrentUser = function () {
-        //   const defer = $q.defer();
-        //   if (!currentUser) {
-        //     $http
-        //       .get('/authcheck')
-        //       .then((response) => {
-        //         currentUser = response.data;
-      
-        //         that.currentUser.type = response.data.type;
-        //         that.currentUser.username = response.data.username;
-        //         console.log('that', that.currentUser);
-      
-        //         defer.resolve(currentUser);
-        //       })
-        //       .catch(err => defer.resolve());
-        //   } else {
-        //     defer.resolve(currentUser);
-        //   }
-        //   return defer.promise;
-        // };    
 
 
 //***********************      NEW AUTH           ****************************************** */

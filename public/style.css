@@ -118,6 +118,8 @@ a:link {
 
 /***********************************************************************************************/
 /* DELETE BUTTON for most things*/
+
+
 .deleteButton {
     float: right;
 	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
@@ -145,6 +147,10 @@ a:link {
 	position:relative;
 	top:1px;
 }
+
+
+
+
 
 /***********************************************************************************************/
 
@@ -303,7 +309,10 @@ a:link {
     border: 2px solid black; 
 }
 
-
+.mainInputBidBox{
+    display: flex;
+    justify-content: center;
+}
 
 
 

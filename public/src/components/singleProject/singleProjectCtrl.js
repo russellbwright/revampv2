@@ -1,17 +1,27 @@
-angular.module('myApp').controller('singleProjectCtrl', function($scope, projectService, $state, $stateParams){
+angular.module('myApp').controller('singleProjectCtrl', function($scope, projectService, user, $state, $stateParams){
 
 
 $scope.test = "imbad"
 
 
+  
 
-   console.log($stateParams.id)
    projectService.singleProject($stateParams.id).then(result => {
        console.log(result.data)
-       $scope.proj = result.data[0];
+     $scope.proj = result.data[0];
+     
+            
+              
+     
    })
+   
 
+  
 
+   $scope.addBid = (bid, projid) => {
+       
+        projectService.addBid(bid, user, projid)
+   }
 
 
 })

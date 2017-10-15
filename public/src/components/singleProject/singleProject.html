@@ -20,6 +20,7 @@
             
             <div class='singleProjectCompanyName'>
                 {{proj.com_name}}
+                
             </div>
         </div>
     
@@ -78,10 +79,19 @@
 
 
     <hr>
+        <form>
+                    <div class="mainInputBidBox">
+            
+                <div>
+                        <input ng-model="bid.myBid" type='text'  placeholder="Bid" class='addInput' required/>  
+                        <input ng-model="bid.company" type='text'  placeholder="Company Name" class='addInput' required/>
+                </div>
+                
+                <div>
+                        <button type="submit" class="bidButton" ng-click="addBid(bid, proj)" >Add Bid</button>
+                </div>
 
+                    </div>
 
-            <div>
-                    <div class="buttonBox"> <a ui-sref="" class="bidButton">Add Bid</a></div>
-            </div>
-
+        </form>    
 </div>

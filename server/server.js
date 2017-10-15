@@ -202,6 +202,8 @@ app.post('/api/projects', projectCtrl.deleteProject);
 app.post('/api/projects/image', projectCtrl.addimage );
 app.post('/api/projects/myProjects', projectCtrl.myProjects);
 
+app.post('/api/bids/newBid', projectCtrl.addBid)
+
 
 
 app.listen(port, () => {

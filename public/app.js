@@ -72,10 +72,10 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
             }
         })
 
-        .state('createBid', {
-            url:'/createBid',
-            templateUrl: "./src/components/createBid/createBid.html",
-            controller: "createBidCtrl",
+        .state('singleBid', {
+            url:'/singleBid',
+            templateUrl: "./src/components/singleBid/singleBid.html",
+            controller: "singleBidCtrl",
             resolve: {
                 user: projectService => projectService.getUser()
                     .then(response => 
