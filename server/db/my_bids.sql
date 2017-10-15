@@ -1,0 +1,1 @@
+SELECT * FROM bids WHERE userid = $1;

@@ -14,10 +14,18 @@ angular.module('myApp').service('projectService', function($http, $q){
         return $http.post('/api/projects', [project.projectid])
     },
 
+    this.deleteBid = function(bids){
+        return $http.post('/api/bids/deleteBid', [bids.bidid])
+    }
+
     this.singleProject = function(id){
         // console.log(id)
         return $http.get('/api/projects/singleProject/' + id)
      },
+
+     this.singleBid = function(id){
+         return $http.get('/api/bids/singleBid/' + id)
+     }
 
      this.uploadImage = (file) => {
         const storageRef = firebase.storage().ref();
@@ -48,6 +56,7 @@ angular.module('myApp').service('projectService', function($http, $q){
 
     this.myProjects = (userid) => $http.post('/api/projects/myProjects', [userid.userid])
 
+    this.myBids = (userid) => $http.post('/api/bids/myBids', [userid.userid])
 
     this.addBid = function(bid, userid, proid){
        

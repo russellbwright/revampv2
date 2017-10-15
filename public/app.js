@@ -72,8 +72,20 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
             }
         })
 
+        .state('myBids', {
+            url:'/myBids',
+            templateUrl: "./src/components/myBids/myBids.html",
+            controller: "myBidsCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
+        })
+
         .state('singleBid', {
-            url:'/singleBid',
+            url: '/singleBid/:id',
             templateUrl: "./src/components/singleBid/singleBid.html",
             controller: "singleBidCtrl",
             resolve: {

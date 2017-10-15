@@ -70,6 +70,32 @@ module.exports = {
             () => 
             res.status(200).json() )
             .catch( () => res.status(500).json() )
+    },
+
+    myBids: (req,res,next) => {
+        const db = req.app.get('db');
+
+        db.my_bids(req.body).then(
+            (response) => res.status(200).json(response) )
+            .catch( () => res.status(500).json() )
+        
+    },
+
+    singleBid: (req,res,next) => {
+        const db = req.app.get('db');
+       console.log(req.params.id)
+        db.single_bid(+req.params.id).then(result => 
+            res.status(200).json(result)).catch( () => res.status(500).json())
+            
+    },
+
+    deleteBid: (req,res,next) => {
+        const db = req.app.get('db');
+
+        db.delete_bid(req.body).then(
+            () => 
+            res.status(200).json() )
+            .catch( () => res.status(500).json() )
     }
 
     // singleProject: (req,res,next) => {

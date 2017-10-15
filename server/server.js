@@ -202,7 +202,10 @@ app.post('/api/projects', projectCtrl.deleteProject);
 app.post('/api/projects/image', projectCtrl.addimage );
 app.post('/api/projects/myProjects', projectCtrl.myProjects);
 
-app.post('/api/bids/newBid', projectCtrl.addBid)
+app.post('/api/bids/newBid', projectCtrl.addBid);
+app.post('/api/bids/myBids', projectCtrl.myBids);
+app.get('/api/bids/singleBid/:id', projectCtrl.singleBid);
+app.post('/api/bids/deleteBid', projectCtrl.deleteBid);
 
 
 

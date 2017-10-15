@@ -1,0 +1,1 @@
+SELECT * FROM bids WHERE bidid = $1

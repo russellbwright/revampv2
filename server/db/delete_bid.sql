@@ -1,0 +1,1 @@
+DELETE FROM bids WHERE bidid = $1;

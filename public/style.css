@@ -4,9 +4,7 @@ body {
     padding: 0;
   }
 
-.testFooter{
-    height: 25px;
-}
+
 
 /*****************************************/
 /* Below is for the Navigation Bar */
@@ -183,6 +181,38 @@ a:link {
 	position:relative;
 	top:1px;
 }
+
+
+/********************************************* DELETE BID BUTTON */
+.deleteBidButton {
+	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background-color:#E00000;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* Needs a Better Font */
+	font-size:24px;
+	font-weight:bold;
+	padding:5px 63px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.deleteBidButton:hover {
+    background-color:#353535;
+    color: white;
+}
+.deleteBidButton:active {
+	position:relative;
+	top:1px;
+}
+
+
 
 
 
