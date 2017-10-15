@@ -28,6 +28,10 @@ angular.module('myApp').service('projectService', function($http, $q){
          return $http.get('/api/projects/mySingleProject/' + id)
      }
 
+     this.myProjectBids = function(id){
+         return $http.get('/api/bids/myProjectBids/' + id)
+     }
+
      this.singleBid = function(id){
          return $http.get('/api/bids/singleBid/' + id)
      }

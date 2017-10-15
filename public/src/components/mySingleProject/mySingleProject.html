@@ -68,7 +68,7 @@
     <hr>
 
         <div ng-repeat="projectbids in myProjectBids" class='mainViewProjects'>
-            <a ui-sref="singleBid({id:bids.bidid})">
+            <a ui-sref="singleBid({id:projectbids.bidid})">
            Company Name: {{projectbids.company_name}} --- Bid Amount: {{projectbids.bid}} <br>
            ProjectId: {{projectbids.projectid}}
            <div> <br> </div>

@@ -10,8 +10,14 @@ angular.module('myApp').controller('mySingleProjectCtrl', function($scope, proje
        
         // projectService.myProjectBids().then(response => {
         //     // console.log(response)
-        //     $scope.myProjectBids = response.data;
+            
+        // $scope.myProjectBids = response.data;
         // })
-        
+
+        projectService.myProjectBids($stateParams.id).then(response => {
+            // console.log(response)
+            
+        $scope.myProjectBids = response.data;
+        })
 
     })

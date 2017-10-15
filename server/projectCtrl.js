@@ -106,6 +106,12 @@ module.exports = {
             
     },
 
+    myProjectBids: (req,res,next) => {
+        const db = req.app.get('db');
+
+        db.my_project_bids(+req.params.id).then(result => res.status(200).json(result)).catch( () => res.status(500).json())
+        }
+
     // singleProject: (req,res,next) => {
     //     const db = req.app.get('db');
         
