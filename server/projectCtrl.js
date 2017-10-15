@@ -96,7 +96,15 @@ module.exports = {
             () => 
             res.status(200).json() )
             .catch( () => res.status(500).json() )
-    }
+    },
+
+    mySingleProject: (req,res,next) => {
+        const db = req.app.get('db');
+       
+        db.my_single_project(+req.params.id).then(result => 
+            res.status(200).json(result)).catch( () => res.status(500).json())
+            
+    },
 
     // singleProject: (req,res,next) => {
     //     const db = req.app.get('db');

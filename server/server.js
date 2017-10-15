@@ -207,6 +207,8 @@ app.post('/api/bids/myBids', projectCtrl.myBids);
 app.get('/api/bids/singleBid/:id', projectCtrl.singleBid);
 app.post('/api/bids/deleteBid', projectCtrl.deleteBid);
 
+app.get('/api/projects/mySingleProject/:id', projectCtrl.mySingleProject);
+
 
 
 app.listen(port, () => {

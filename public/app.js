@@ -96,6 +96,18 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
             }
         })
 
+        .state('mySingleProject', {
+            url: '/mySingleProject/:id',
+            templateUrl: "./src/components/mySingleProject/mySingleProject.html",
+            controller: "mySingleProjectCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
+        })
+
         $urlRouterProvider
             .otherwise('/');
 
