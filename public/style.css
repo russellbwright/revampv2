@@ -4,7 +4,14 @@ body {
     padding: 0;
   }
 
+img{
+    max-height: 100%;
+}
 
+.logoBox{
+    height:120px;
+    
+}
 
 /*****************************************/
 /* Below is for the Navigation Bar */
@@ -14,8 +21,7 @@ body {
     font-weight: bold;
     display: flex;
     justify-content: space-around;
-    padding-top: 10px;
-    padding-bottom:10px;
+   
     letter-spacing: 1px;
     
    
