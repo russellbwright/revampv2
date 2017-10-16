@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'open sans'
   }
 
 img{
@@ -24,7 +25,7 @@ img{
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    letter-spacing: 1px;
+    
 }
 
 
@@ -32,12 +33,15 @@ img{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right:5%;
+    margin-right:4%;
 }
 
 .navList{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
     color: #CCCFDC;
-    margin: 5px;
+    margin: 7px;
+    
 }
 
 
@@ -72,20 +76,58 @@ a:hover {
 /*****************************************/
 /* Below is for the main HOME Page */
 
-.mainTitle {
-    color: #353535;
-    margin: 0 auto;
+.mainTitle{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: 35px;
-    border-bottom: 2px solid #7BEBFF;
-    /* background-color: #7BEBFF; */
+}
+
+.bigTitle {
+    color: #f7b369;
+    margin-top:5%;
+    margin-right:15%;
+    margin-left:15%;
+    font-size:25px;
+   
+    
+    
+
+}
+
+.bigTitle h1 {
+    vertical-align: middle; 
+    text-align: center; 
+    font-weight: lighter;
+    letter-spacing: .15em;
+}
+
+.paraMain {
+    margin-left:15%;
+    margin-right:15%;
+    letter-spacing: 2px;
+    color: #606469;
+    font-size: 1.125rem;
+}
+
+.paraMain p {
+    vertical-align: middle; 
+    text-align: center; 
 }
 
 .buttonBox {
     padding: 25px;
     display: flex;
     justify-content: center;
+    
+}
+
+.orangeSpan {
+        margin-left: 40%;
+        background-color: black;
+        height: 3px;
+        width: 20%;
+        margin-top:3%;
+        margin-bottom: 5%
     
 }
 
