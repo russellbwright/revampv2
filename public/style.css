@@ -5,7 +5,19 @@ body {
     font-family: 'open sans'
   }
 
+.sideMargin{
+    margin-left: 10%;
+    margin-right:10%
+}
+.topMargin{
+    margin-top: 5%;
+    margin-bottom:5%
+}
 
+.sideMargin5{
+    margin-left: 5%;
+    margin-right:5%
+}
 
 /*********** IMAGES */
 
@@ -107,8 +119,8 @@ a:hover {
 .bigTitle {
     color: #f7b369;
     margin-top:5%;
-    margin-right:15%;
-    margin-left:15%;
+    margin-right:10%;
+    margin-left:10%;
     font-size:25px;
    
     
@@ -121,11 +133,12 @@ a:hover {
     text-align: center; 
     font-weight: lighter;
     letter-spacing: .15em;
+    line-height: 55px;
 }
 
 .paraMain {
-    margin-left:15%;
-    margin-right:15%;
+    margin-left:10%;
+    margin-right:10%;
     letter-spacing: 2px;
     color: #606469;
     font-size: 1.125rem;
@@ -154,6 +167,64 @@ a:hover {
 }
 
 
+.homeQuoteBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f7b369;
+    color:white;
+    
+}
+
+.homeQuote{
+   
+    font-size: 25px;
+}
+
+.nameQuote{
+    font-size: 1rem;
+    
+    margin-bottom:5%; 
+
+}
+
+.quote{
+    vertical-align: middle; 
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+.mainInfoTextBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.infoTextBox{
+    margin-left: 10%;
+    margin-right: 3%
+
+}
+
+.mainInfoImgBox{
+    margin-right:10%;
+}
+
+.bigInfoText{
+    letter-spacing: 4px;
+    color: #f7b369;
+    font-weight: bold;
+}
+
+.smallInfoText{
+    letter-spacing: 2px;
+    vertical-align: left; 
+    text-align: left;
+}
+
+
 /*************************** Home Page Button */
 
 
@@ -164,7 +235,7 @@ a:hover {
     
 	background:    #63BFD8;
     border:        3px solid #63BFD8;
-    border-radius: 20px;
+    border-radius: 25px;
     padding:       10px 27px;
     color:         #ffffff;
     display:       inline-block;
