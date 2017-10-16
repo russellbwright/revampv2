@@ -21,41 +21,17 @@
     </div>
 
 
-
-
+            <div class="homeButtonBox"> <button class='homeButton' >List a Project</button><button class='homeButton homebidbutton' >List the Bid</button></div>
     
-    <div class="buttonBox"> <a ui-sref="addProject" class="myButton">Add Project</a></div>
-    
-    <div class='projectTitle'>Most Recent Projects</div>
-
-<div>
             
-    <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true |limitTo:4">
-                        
-            <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
+    <div class='mainHomeImgBox'>
+        <div class='cabImgBox'>
+            <img  class='cabImg' src="./src/img/Homepage-image.jpg" alt="">
+        </div>
+    </div>   
 
-                 <a ui-sref="singleProject({id:project.projectid})">
-
-            <div class="boldProject" ng-click="">
-                {{project.com_name}} 
-            </div>
-
-            <div ng-click=""> 
-                Units: {{project.units}} - Budget: {{project.budget}} 
-            </div>
-            
-            <div ng-click="">
-                Desc: {{project.short_desc}}
-            </div> 
-         </a>
-
-         
-         <hr>
-
+    <div>
+        hey
     </div>
-</div>
-
-   
-        
    
 </div>

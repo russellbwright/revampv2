@@ -5,7 +5,13 @@ body {
     font-family: 'open sans'
   }
 
-img{
+
+
+/*********** IMAGES */
+
+
+
+.logoImg{
     max-height: 100%;
 }
 
@@ -16,6 +22,22 @@ img{
     height:120px;
     
 }
+
+.cabImg{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.cabImgBox{
+    
+    width: 100%
+}
+
+
+
+
+
+
 
 /*****************************************/
 /* Below is for the Navigation Bar */
@@ -131,6 +153,48 @@ a:hover {
     
 }
 
+
+/*************************** Home Page Button */
+
+
+
+.homeButton {
+    margin-top: 4%;
+    margin-bottom:5%;
+    
+	background:    #63BFD8;
+    border:        3px solid #63BFD8;
+    border-radius: 20px;
+    padding:       10px 27px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal 700 30px/1 "Open Sans", sans-serif;
+    text-align:    center;
+    letter-spacing: 1px;
+    /* text-shadow:   1px 1px #666666; */
+}
+.homeButton:hover {
+    background-color:white;
+    color: #7C8B9E;
+}
+.homeButton:active {
+	position:relative;
+	top:1px;
+}
+
+.homeButtonBox{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 13%;
+}
+
+
+
+
+
+
+
 /*****************************************/
 /* ADD PROJECT button */
 
@@ -161,7 +225,6 @@ a:hover {
 	position:relative;
 	top:1px;
 }
-
 
 
 .projectTitle {
