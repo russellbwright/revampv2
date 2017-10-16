@@ -173,18 +173,18 @@ a:hover {
     justify-content: center;
     background-color: #f7b369;
     color:white;
-    
 }
 
 .homeQuote{
-   
+    margin-top: 10%;
     font-size: 25px;
+
 }
 
 .nameQuote{
     font-size: 1rem;
     
-    margin-bottom:5%; 
+    margin-bottom:10%; 
 
 }
 
@@ -199,7 +199,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .infoTextBox{
@@ -216,13 +216,33 @@ a:hover {
     letter-spacing: 4px;
     color: #f7b369;
     font-weight: bold;
+    
 }
 
 .smallInfoText{
     letter-spacing: 2px;
     vertical-align: left; 
     text-align: left;
+    font-size: 16px;
+    color: #606469;
 }
+
+.subscription{
+    margin-bottom:2%;
+}
+
+.subbutton{
+    margin-top:2%;
+}
+
+.contactUsMainBox{
+    background-color: #f7b369;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    
+}
+
 
 
 /*************************** Home Page Button */
@@ -262,6 +282,23 @@ a:hover {
 
 
 
+.learnMore{
+    font-size: 20px;
+}
+
+.contactUsButton{
+    font-size: 15px;
+    padding: 10px 10px;
+    background: white;
+    color: #f7b369;
+    border: 3px solid #f7b369;
+}
+
+.contactUsButton:hover {
+    background-color: #f7b369;
+    color: white;
+    border: 2px solid white;
+}
 
 
 
