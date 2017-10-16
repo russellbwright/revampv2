@@ -63,9 +63,25 @@
             </div>
         </div>    
 
+        <div class='projectDeleteBox'>
+                <div>
+                        <a href="" class="deleteBidButton" ng-click="deleteProject(project)">Delete</a>
+                </div>
+            </div>
+
+    <hr>    
+
+    
+            <div class='myProjectBidTitleBox'>
+                <div class='bidTitleBox'>
+                    Bids for Project:{{proj.projectid}}
+                </div>
+            </div>
+
+            <hr>
 
 
-    <hr>
+            
 
         <div ng-repeat="projectbids in myProjectBids" class='mainViewProjects'>
             <a ui-sref="singleBid({id:projectbids.bidid})">
