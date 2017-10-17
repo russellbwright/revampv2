@@ -199,6 +199,15 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5%;
+
+}
+
+.mainInfoTextBox2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
 }
 
@@ -243,7 +252,38 @@ a:hover {
 }
 
 
+.contactUsTitle {
+    margin-bottom: 5%;
 
+}
+
+.contactName{
+    margin-bottom:2%;
+}
+
+.contactEmail{
+    margin-bottom:2%;
+    width: 100%;
+}
+
+
+
+.contactFirstName{
+    margin-right: 3%;
+}
+
+
+textarea{
+    width: 100%;
+}
+
+.inputPadding{
+    padding: 10px 8px;
+}
+
+.inputTextArea{
+    text-align: left;
+}
 
 
 /*************************** Home Page Button */
@@ -293,12 +333,20 @@ a:hover {
     background: white;
     color: #f7b369;
     border: 2px solid #f7b369;
+    float: right;
 }
 
 .contactUsButton:hover {
     background-color: #f7b369;
     color: white;
     border: 2px solid white;
+}
+
+.contactUsBox{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
 }
 
 
