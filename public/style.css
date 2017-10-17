@@ -46,10 +46,46 @@ body {
 }
 
 
+/******************************* FOOTERDIR */
 
+.footerGroup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #606469;
+    color: white;
+}
 
+.numberFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
 
+.mainFooterBox{
+    /* position: absolute; */
+    /* background: #606469; */
+    /* float: bottom; */
+    
+}
 
+.copyRight {
+    font-size: 10px;
+}
+
+/* .left {
+    margin-left: 1%;
+}
+
+.right {
+    margin-right: 1%;
+} */
+
+.number {
+    font-size: px;
+}
 
 /*****************************************/
 /* Below is for the Navigation Bar */
@@ -75,6 +111,7 @@ body {
     letter-spacing: 2px;
     color: #CCCFDC;
     margin: 7px;
+    font-size: 14px;
     
 }
 
@@ -275,6 +312,7 @@ a:hover {
 
 textarea{
     width: 100%;
+    resize: none;
 }
 
 .inputPadding{
@@ -308,6 +346,11 @@ textarea{
 .homeButton:hover {
     background-color:white;
     color: #7C8B9E;
+}
+
+.homeButton2:hover{
+    background-color: #606469;
+    color: white;
 }
 .homeButton:active {
 	position:relative;
@@ -349,6 +392,19 @@ textarea{
     font-size: 20px;
 }
 
+.footerHover {
+    font-size: 15px;
+    padding: 10px 10px;
+    background: white;
+    color: #f7b369;
+    border: 2px solid #f7b369;
+    float: right;
+}
+
+.footerHover:hover {
+    background-color: #606469;
+
+}
 
 
 
@@ -652,3 +708,4 @@ textarea{
         display: none;
     }
 }
+
