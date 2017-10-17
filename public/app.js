@@ -108,6 +108,22 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
             }
         })
 
+        .state('managers', {
+            url: '/managers',
+            templateUrl: "./src/components/managers/managers.html",
+
+        })
+
+        .state('contractors', {
+            url: '/contractors',
+            templateUrl: './src/components/contractors/contractors.html',
+        })
+
+        .state('myProfile', {
+            url:'/myProfile',
+            templateUrl: './src/components/myProfile/myProfile.html',
+        })
+
         $urlRouterProvider
             .otherwise('/');
 
