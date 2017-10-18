@@ -19,7 +19,7 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         })
 
         .state('projects', {
-            url:'/projects',
+            url:'/projectslist',
             templateUrl:"./src/components/projectList/projectList.html",
             controller: "projectCtrl",
             resolve: {
@@ -122,7 +122,14 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         .state('myProfile', {
             url:'/myProfile',
             templateUrl: './src/components/myProfile/myProfile.html',
-        })
+            controller: "myProfileCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
+         })
 
         $urlRouterProvider
             .otherwise('/');

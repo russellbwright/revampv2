@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h3>Hey this is the login page</h3>
 
     <form>
@@ -21,4 +21,29 @@
     </form>
 
 
+</div> -->
+
+
+<div class='mainLoginDiv'> 
+    <div class='loginLogoBox loginpage'><div class='centerCenter'><img class="cabImg loginlogo logoImg" src="./src/img/reVampTrans.png" ></div></div>
+          
+    <div class='loginPasswordBox loginpage'>  <form class='loginForm'>
+            <label for="username">Username</label>
+            <input type="text" name="username" ng-model="log.username" required>
+            <div>
+                <div>
+                    Enter Username
+                </div>
+            </div>
+    
+            <label for="password">Password </label>
+            <input type="password" name="password" ng-model="log.password"  required>
+            <div>
+                Enter Password
+            </div>
+    
+            <button ui-sref="register" class='homeButton learnMore' >Register</button>
+            <button type="submit" class="homeButton learnMore" ng-click="login(log)">Log In</button>
+        </form></div>
 </div>
+

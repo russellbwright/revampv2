@@ -211,6 +211,7 @@ app.get('/api/projects/mySingleProject/:id', projectCtrl.mySingleProject);
 
 app.get('/api/bids/myProjectBids/:id', projectCtrl.myProjectBids);
 
+// app.get('/api/both/getBoth/:id', projectCtrl.getBoth)
 
 
 app.listen(port, () => {
