@@ -26,22 +26,25 @@ angular.module('myApp').controller('mySingleProjectCtrl', function($scope, proje
 
 
 
+        $scope.deleteBids = (bid) => {
+
+            console.log(bid)
+            projectService.deleteBids(bid)
+        }
 
 
+
+
+       
 
 
 
         $scope.deleteProject = (project) => {
-            // console.log(project.projectid)
-            console.log(project)
-            
-            projectService.deleteProject(project)
-    
-            projectService.myProjects(user).then(response => {
-                $scope.myProjects = response.data;
-            })
-
-            
+            projectService.deleteProject(project);
         }
+
+          
+            
+        
 
     })

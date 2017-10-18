@@ -211,6 +211,8 @@ app.get('/api/projects/mySingleProject/:id', projectCtrl.mySingleProject);
 
 app.get('/api/bids/myProjectBids/:id', projectCtrl.myProjectBids);
 
+app.post('/api/bids/deleteBids', projectCtrl.deleteBids)
+
 // app.get('/api/both/getBoth/:id', projectCtrl.getBoth)
 
 

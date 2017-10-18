@@ -11,7 +11,7 @@ module.exports = {
     createProject: (req,res,next) => {
         const db = req.app.get('db');
         // const {company, units, description, type, budget, last_name, first_name, long_desc} = req.body;
-        console.log(req.body)
+        
         db.create_project(req.body).then(
             (response) => 
             res.status(200).json(response) )
@@ -40,7 +40,7 @@ module.exports = {
 
     addimage: (req,res,next) => {
         const db = req.app.get('db');
-
+        console.log(req.body)
         db.add_image(req.body).then(response => 
             res.status(200).json(response)).catch( () => res.status(500).json())
         
@@ -113,6 +113,15 @@ module.exports = {
         .catch( () => res.status(500).json())
     },
 
+    deleteBids: (req,res,next) => {
+        const db = req.app.get('db');
+
+        db.delete_bids(req.body).then(
+            () => 
+            res.status(200).json() )
+            .catch( () => res.status(500).json() )
+    }
+
     // getBoth: (req,res,next) => {
     //     const db = req.app.get('db');
 
@@ -128,7 +137,7 @@ module.exports = {
 
 
 
-    
+
     // singleProject: (req,res,next) => {
     //     const db = req.app.get('db');
         

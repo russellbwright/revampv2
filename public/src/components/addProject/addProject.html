@@ -1,4 +1,4 @@
-<div class='mainAddProjectBox'>
+<!-- <div class='mainAddProjectBox'>
     <div class='addTitle'>
         <div>Add your new Project</div>
     </div>
@@ -40,9 +40,9 @@
         <img style="width: 300px;" ngf-thumbnail="image">
         <button name="image" ngf-select ng-model="image">Upload image</button>
         <button ng-click="submit(image)">Submit</button>
-    </form>
+    </form> 
 
-    <!-- <div>-</div>
+     <div>-</div>
 
     <div>
 
@@ -53,4 +53,83 @@
 
    
     
-</div>
+</div> -->
+
+
+
+
+
+
+
+<div class='mainAddProjectBox'>
+
+
+    <div class='singleProjectTitleBox'>
+
+            <div class='addTitle'>
+                    <div>Add your new Project</div>
+                </div>
+    </div>
+
+    <div class='singleProjectBigTopBox'>
+
+        <div class="mainImgDivBox">
+            <div class="singleImgBox">
+                <div class="imgbox">
+                   <!-- <img ng-src="{{images.image_url}}"> -->
+                   <img style="width: 300px;" ngf-thumbnail="image" class="cabImg">
+                </div>
+            </div>
+            <div class="singleImgBox">
+                <div class="imgbox">
+                    2
+                </div>
+            </div>
+            <div class="singleImgBox">
+                <div class="imgbox">
+                    3
+                </div>
+            </div>
+            <div class="singleImgBox">
+                <div class="imgbox">
+                    4
+                </div>
+            </div>
+
+                <form name="form">
+                    <!-- <img style="width: 300px;" ngf-thumbnail="image"> -->
+                    <button name="image" ngf-select ng-model="image">Upload image</button>
+                    <!-- <button ng-click="submit(image)">Submit</button> -->
+                </form> 
+        </div>
+
+        <div class='mainInfoDivBox'>
+                <div>
+                        
+                    <input ng-model="project.first" type='text' placeholder="First Name" class='addInput' />
+                    <input ng-model="project.last" type='text' placeholder="Last Name" class='addInput' />
+                        
+                </div>
+        </div>
+    </div>
+
+
+    <div class='secondInfoBox'>
+        <div class='test'>
+            2nd info box
+        </div>
+    </div>
+
+
+
+    <div class='mainLongDescBox'>
+        <div class='test longDescBox'>
+            Description Box
+        </div>
+
+        <div>
+            <br>
+        </div>
+    </div>
+    <button type="submit" class="myButton" ng-click="submitWhole(project, image)" >SUBMIT</button>
+</div>    

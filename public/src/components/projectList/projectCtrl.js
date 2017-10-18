@@ -25,12 +25,24 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
         })
     }
 
-    $scope.submit = function(file) {
-        projectService.uploadImage(file)
-      }
+    // $scope.submit = function(file) {
+    //     projectService.uploadImage(file)
+    //   }
+
+    
+    $scope.submitWhole = function(project, image) {
+        console.log(image)
+        projectService.addProject(project, user)
+        .then(response => {
+            console.log(response.data[0].projectid)
+            console.log(image)
+            projectService.uploadImage(image ,response.data[0], user)
+        })
+    }
 
 
-    //*******THIS IS WORKING TO GET IMAGES*********** */
+    /*******THIS IS WORKING TO GET IMAGES*********** */
+
     // projectService.images().then(response => {
     //     console.log(response.data)
     //     $scope.images = response.data[0];

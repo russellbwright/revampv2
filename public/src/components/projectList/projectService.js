@@ -7,6 +7,7 @@ angular.module('myApp').service('projectService', function($http, $q){
         // console.log(project)
         
         return $http.post('/api/projects/createProject', [project.last, project.first, project.company, project.units, project.shortDesc, project.type, userid.userid])
+        then(response => response.data)
     }, 
 
     this.deleteProject = function(project){
@@ -16,6 +17,11 @@ angular.module('myApp').service('projectService', function($http, $q){
 
     this.deleteBid = function(bids){
         return $http.post('/api/bids/deleteBid', [bids.bidid])
+    }
+
+    this.deleteBids = function(projid){
+        console.log(projid)
+        return $http.post('/api/bids/deleteBids', [projid])
     }
 
     this.singleProject = function(id){
@@ -40,7 +46,7 @@ angular.module('myApp').service('projectService', function($http, $q){
          return $http.get('/api/bids/singleBid/' + id)
      }
 
-     this.uploadImage = (file) => {
+     this.uploadImage = (file, id, userid) => {
         const storageRef = firebase.storage().ref();
         const uploadTask = storageRef.child('images/' + file.name).put(file);
         uploadTask.on('state_changed', (snapshot) => {
@@ -56,7 +62,7 @@ angular.module('myApp').service('projectService', function($http, $q){
         }, function() {
             let downloadURL = [uploadTask.snapshot.downloadURL];
             console.log(downloadURL)
-            return $http.post(`/api/projects/image`, downloadURL);
+            return $http.post(`/api/projects/image`, [downloadURL, id.projectid, userid.userid]);
             });
     
     },
