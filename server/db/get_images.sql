@@ -1,1 +1,1 @@
-SELECT * FROM pictures
+SELECT * FROM pictures WHERE projectid = $1;

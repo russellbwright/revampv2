@@ -48,8 +48,8 @@ module.exports = {
 
     getImages: (req,res,next) => {
         const db = req.app.get('db');
-        
-        db.get_images()
+        console.log(req.body)
+        db.get_images(req.body)
             .then(images => res.status(200).json(images))
             .catch( () => res.status(500).json())
     },
@@ -100,7 +100,7 @@ module.exports = {
 
     mySingleProject: (req,res,next) => {
         const db = req.app.get('db');
-       
+       console.log(+req.params.id)
         db.my_single_project(+req.params.id).then(result => 
             res.status(200).json(result)).catch( () => res.status(500).json())
             

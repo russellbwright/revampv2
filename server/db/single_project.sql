@@ -1,1 +1,3 @@
-SELECT * FROM projects WHERE projectid = $1
+SELECT * FROM projects 
+FULL OUTER JOIN images ON projects.projectid = images.projectid
+where images.projectid = $1;

@@ -2,10 +2,16 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
 
     // "use strict";
 
+
+
+
     projectService.projects().then(response => {
         // console.log(response)
         $scope.projects = response.data;
     })
+
+
+
 
     $scope.addProject = (project) => {
         // console.log(project)
@@ -14,6 +20,8 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
     }
 
     
+
+
 
     $scope.deleteProject = (project) => {
         // console.log(project.projectid)
@@ -25,21 +33,28 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
         })
     }
 
-    // $scope.submit = function(file) {
-    //     projectService.uploadImage(file)
-    //   }
+   
+
+
 
     
-    $scope.submitWhole = function(project, image) {
-        console.log(image)
-        projectService.addProject(project, user)
-        .then(response => {
-            console.log(response.data[0].projectid)
-            console.log(image)
-            projectService.uploadImage(image ,response.data[0], user)
-        })
-    }
+    // $scope.submitWhole = function(project, image) {
+    //     console.log(image)
+    //     projectService.addProject(project, user)
+    //     .then(response => {
+    //         console.log(response.data[0].projectid)
+    //         console.log(image)
+    //         projectService.uploadImage(image ,response.data[0], user)
+    //     })
+    // }
 
+
+
+
+
+
+
+    
 
     /*******THIS IS WORKING TO GET IMAGES*********** */
 
@@ -47,6 +62,10 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
     //     console.log(response.data)
     //     $scope.images = response.data[0];
     // })
+
+     // $scope.submit = function(file) {
+    //     projectService.uploadImage(file)
+    //   }
     
 
 })

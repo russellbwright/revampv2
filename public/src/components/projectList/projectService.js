@@ -30,7 +30,7 @@ angular.module('myApp').service('projectService', function($http, $q){
      },
 
      this.mySingleProject = function(id){
-         
+            console.log(id)
          return $http.get('/api/projects/mySingleProject/' + id)
      }
 
@@ -60,9 +60,9 @@ angular.module('myApp').service('projectService', function($http, $q){
         }, function(error) {
     
         }, function() {
-            let downloadURL = [uploadTask.snapshot.downloadURL];
-            console.log(downloadURL)
-            return $http.post(`/api/projects/image`, [downloadURL, id.projectid, userid.userid]);
+            // let downloadURL = [uploadTask.snapshot.downloadURL];
+            
+            return $http.post(`/api/projects/image`, [uploadTask.snapshot.downloadURL, id.projectid, userid.userid]);
             });
     
     },

@@ -33,7 +33,7 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         .state('addProject', {
             url:'/addProject',
             templateUrl:"./src/components/addProject/addProject.html",
-            controller: "projectCtrl",
+            controller: "addProjectCtrl",
             resolve: {
                 user: projectService => projectService.getUser()
                     .then(response => 
@@ -130,6 +130,8 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
                     .catch(err => err)
             }
          })
+
+         
 
         $urlRouterProvider
             .otherwise('/');

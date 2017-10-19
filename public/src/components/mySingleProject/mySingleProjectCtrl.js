@@ -43,8 +43,17 @@ angular.module('myApp').controller('mySingleProjectCtrl', function($scope, proje
             projectService.deleteProject(project);
         }
 
+
+
+
           
-            
+    //     projectService.images().then(response => {
+    //         console.log(response.data)
+    //         $scope.images = response.data[0];
+    // })
         
+
+
+
 
     })
