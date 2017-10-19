@@ -1,15 +1,17 @@
 angular.module('myApp').controller('addProjectCtrl', function($scope, projectService, $state, user, $stateParams){
     
    
-    $scope.submitWhole = function(project, image) {
+    $scope.submitWhole = function(proj, image) {
         console.log(image)
-        projectService.addProject(project, user)
+        projectService.addProject(proj, user)
         .then(response => {
-            console.log(response.data[0].projectid)
-            console.log(image)
-            projectService.uploadImage(image ,response.data[0], user)
+
+            projectService.uploadImage(image, response.data[0], user)
+            $state.go('Home');
+            
         })
     }
+
 
     
 })

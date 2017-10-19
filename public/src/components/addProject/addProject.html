@@ -66,70 +66,93 @@
 
     <div class='singleProjectTitleBox'>
 
-            <div class='addTitle'>
-                    <div>Add your new Project</div>
-                </div>
+        <div class='addTitle '>
+            <div>Add Your New Project</div>
+        </div>
     </div>
 
     <div class='singleProjectBigTopBox'>
 
         <div class="mainImgDivBox">
-            <div class="singleImgBox">
-                <div class="imgbox">
-                   <!-- <img ng-src="{{images.image_url}}"> -->
-                   <img style="width: 300px;" ngf-thumbnail="image" class="cabImg">
+            <div class="placeHolderImg">
+                <div class='topAddImgBox'>
+                    <img style="height: 300px" ngf-thumbnail="image" class="cabImg">
                 </div>
             </div>
-            <div class="singleImgBox">
-                <div class="imgbox">
-                    2
-                </div>
-            </div>
-            <div class="singleImgBox">
-                <div class="imgbox">
-                    3
-                </div>
-            </div>
-            <div class="singleImgBox">
-                <div class="imgbox">
-                    4
-                </div>
-            </div>
-
+            <div class='bottomAddImgBox'>
                 <form name="form">
                     <!-- <img style="width: 300px;" ngf-thumbnail="image"> -->
-                    <button name="image" ngf-select ng-model="image">Upload image</button>
+                    <div> One Picture Required </div>
+                    <button name="image" ngf-select ng-model="image" class='sideMargin5 contactUsButton subbutton homeButton learnMoreRight'>Upload image*</button>
                     <!-- <button ng-click="submit(image)">Submit</button> -->
-                </form> 
+                </form>
+            </div>
         </div>
 
-        <div class='mainInfoDivBox'>
-                <div>
-                        
-                    <input ng-model="project.first" type='text' placeholder="First Name" class='addInput' />
-                    <input ng-model="project.last" type='text' placeholder="Last Name" class='addInput' />
-                        
-                </div>
+        <div class='addBackgroundColor mainInfoDivBox'>
+            <div class='addTopMargin2 contactUsBox addSubmit'>
+                Company Info
+            </div>
+            <div class='addTopMargin namesBox'>
+                <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="First Name*" ng-model="Proj.firstName" required></span>
+                    <input class='addProjAll name inputPadding' type="text" placeholder="Last Name*" ng-model="Proj.lastName" required></div>
+
+            </div>
+
+            <div><input class='addProjAll addProjectEmail contactEmail inputPadding' type="text" placeholder="Email*" ng-model="Proj.email" required></div>
+
+            <div><input class='addProjAll addProjectEmail contactEmail inputPadding' type="text" placeholder="Company Name*" ng-model="Proj.com_name" required></div>
+
+
+
+            <div><input class='addProjAll addTopMargin addProjectEmail contactEmail inputPadding' type="text" placeholder="Project Address*" ng-model="Proj.proj_address" required></div>
+
+            <div class='namesBox'>
+                <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="Tx*" ng-model="Proj.state" required></span>
+                    <input class='addProjAll name inputPadding' type="text" placeholder="Zip Code*" ng-model="Proj.zip" required></div>
+
+            </div>
+
+            <!-- <div><input class='addTopMargin addProjectEmail contactEmail inputPadding' type="text" placeholder="Project Address*" required></div>
+            
+                        <div class='namesBox'>
+                            <div class='contactName'><span class='contactFirstName'><input class='name inputPadding' type="text" placeholder="State*" required></span>
+                            <input class='name inputPadding' type="text" placeholder="Zip Code*" required></div>
+            
+                        </div> -->
+
         </div>
     </div>
 
 
     <div class='secondInfoBox'>
-        <div class='test'>
-            2nd info box
+        <div class='addTitle'>
+            Project Info
         </div>
+        <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="Main Project*" ng-model="Proj.main_proj" required></span>
+            <input class='addProjAll name inputPadding' type="integer" placeholder="Budget*" ng-model="Proj.budget" required></div>
+
+        <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="Type*" ng-model="Proj.type" required></span>
+            <input class='addProjAll name inputPadding' type="integer" placeholder="Units*" ng-model="Proj.units" required></div>
+
+        <div><textarea placeholder="Short Desc for Project List...*" class="addProjAll addProjectShortArea inputPadding inputTextArea" rows="2" cols="10" ng-model="Proj.short_desc" required></textarea></div>        
+
     </div>
 
 
 
     <div class='mainLongDescBox'>
-        <div class='test longDescBox'>
-            Description Box
+        <div class='longDescBox'>
+                <textarea placeholder="Long Description for Single Project Page...*" class="addProjAll addProjectLongArea inputPadding inputTextArea" rows="11" cols="10" ng-model="Proj.long_desc" required></textarea>
         </div>
 
         <div>
             <br>
         </div>
     </div>
-    <button type="submit" class="myButton" ng-click="submitWhole(project, image)" >SUBMIT</button>
-</div>    
+
+    <div class='addSubmit'>
+        <button type="submit" class="sideMargin homeButton" ng-click="submitWhole(proj, image)">SUBMIT</button>
+    </div>
+
+</div>

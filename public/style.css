@@ -5,19 +5,6 @@ body {
     font-family: 'open sans'
   }
 
-.sideMargin{
-    margin-left: 10%;
-    margin-right:10%
-}
-.topMargin{
-    margin-top: 5%;
-    margin-bottom:5%
-}
-
-.sideMargin5{
-    margin-left: 5%;
-    margin-right:5%
-}
 
 
 
@@ -40,6 +27,7 @@ body {
 .cabImg{
     max-height: 100%;
     max-width: 100%;
+    
 }
 
 /* .cabImgBox{
@@ -339,7 +327,13 @@ textarea{
     text-align: left;
 }
 
+.addProjectShortArea{
+    width: 50%
+}
 
+.addProjectLongArea {
+    width: 98%
+}
 /*************************** Home Page Button */
 
 
@@ -595,7 +589,9 @@ textarea{
 
 
 
-
+.addProjAll{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
 
 
 
@@ -643,11 +639,39 @@ textarea{
 .addTitle {
     display: flex;
     justify-content: center;
+    font-size: 35px;
+    /* color: #52BCD6 */
+    font-weight: bold;
+    margin-bottom: 5%;
 }
 
+.addBackgroundColor{
+    background-color: #f7b369;
+}
 
+.addTopMargin{
+    margin-top: 5%
+}
 
+.addTopMargin10{
+    margin-top: 10%
+}
 
+.addTopMargin2{
+    margin-top: 2%
+}
+
+.addProjectEmail{
+    width: 90%;
+}
+
+.addProjectShort{
+    width:75%
+}
+
+.topAddImgBox{
+    background-color: #E4E4E4;
+}
 
 
 
@@ -688,8 +712,8 @@ textarea{
     height: 400px;
     width: 400px;
 
-    display: flex;
-    flex-wrap: wrap;
+    
+    
 
     margin-left: 7%;
     margin-right: 5%;
@@ -705,10 +729,21 @@ textarea{
 
 }
 
-.imgbox{
+.topAddImgBox{
 
+    height: 320px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.bottomAddImgBox{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -736,11 +771,11 @@ textarea{
 }
 
 .longDescBox{
-    border: 2px solid black;
+    
     margin-left: 7%;
     margin-top: 4%;
     margin-right: 7%;
-    height: 200px;
+   
 }
 
 .secondInfoBox{
@@ -748,7 +783,7 @@ textarea{
     margin-left: 7%;
     margin-right: 7%;
     margin-top:4%;
-    border: 2px solid black; 
+    /* border: 2px solid black;  */
 }
 
 .mainInputBidBox{
@@ -819,8 +854,25 @@ textarea{
 }
 
 
+.addSubmit{
+    display: flex;
+    justify-content: center;
+}
 
 
+.sideMargin{
+    margin-left: 10%;
+    margin-right:10%
+}
+.topMargin{
+    margin-top: 5%;
+    margin-bottom:5%
+}
+
+.sideMargin5{
+    margin-left: 5%;
+    margin-right:5%
+}
 
 
 
