@@ -94,8 +94,8 @@
                 Company Info
             </div>
             <div class='addTopMargin namesBox'>
-                <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="First Name*" ng-model="Proj.firstName" required></span>
-                    <input class='addProjAll name inputPadding' type="text" placeholder="Last Name*" ng-model="Proj.lastName" required></div>
+                <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="First Name*" ng-model="Proj.first_name" required></span>
+                    <input class='addProjAll name inputPadding' type="text" placeholder="Last Name*" ng-model="Proj.last_name" required></div>
 
             </div>
 
@@ -135,7 +135,7 @@
         <div class='contactName'><span class='contactFirstName'><input class='addProjAll name inputPadding' type="text" placeholder="Type*" ng-model="Proj.type" required></span>
             <input class='addProjAll name inputPadding' type="integer" placeholder="Units*" ng-model="Proj.units" required></div>
 
-        <div><textarea placeholder="Short Desc for Project List...*" class="addProjAll addProjectShortArea inputPadding inputTextArea" rows="2" cols="10" ng-model="Proj.short_desc" required></textarea></div>        
+        <div><textarea placeholder="Short Desc for Project List...*" class="addProjAll addProjectShortArea inputPadding inputTextArea" rows="2" cols="40" ng-model="Proj.short_desc" required></textarea></div>        
 
     </div>
 
@@ -152,7 +152,7 @@
     </div>
 
     <div class='addSubmit'>
-        <button type="submit" class="sideMargin homeButton" ng-click="submitWhole(proj, image)">SUBMIT</button>
+        <button type="submit" class="sideMargin homeButton" ng-click="submitWhole(Proj, image)">SUBMIT</button>
     </div>
 
 </div>

@@ -4,8 +4,7 @@
     <div class='singleProjectTitleBox'>
 
         <div class='singleProjectCompanyName'>
-            {{proj.com_name}}
-            <br> {{proj.projectid}}
+            {{proj.com_name}} - {{proj.projectid}}
 
         </div>
     </div>
@@ -13,56 +12,46 @@
     <div class='singleProjectBigTopBox'>
 
         <div class="mainImgDivBox">
-            <div class="singleImgBox">
-                <div class="imgbox">
-                        <img ng-src="{{proj.image_url}}" class='cabImg'>
+
+            <div class="placeHolderImg">
+                <div class='topAddImgBox'>
+                    <img ng-src="{{proj.image_url}}" class='cabImg'>
                 </div>
             </div>
-            <div class="singleImgBox">
-                <div class="imgbox">
-                    2
-                </div>
-            </div>
-            <div class="singleImgBox">
-                <div class="imgbox">
-                    3
-                </div>
-            </div>
-            <div class="singleImgBox">
-                <div class="imgbox">
-                    4
-                </div>
-            </div>
+
 
         </div>
 
         <div class='mainInfoDivBox'>
-            <div class='test'>
-                hello
+            <div class='secondInfoBox'>
+                <div class='addTitle'>
+                    Project Info
+                </div>
+                <div class='contactName'><span class='contactFirstName'>Main Project: {{proj.main_proj}}</span> Budget: {{proj.budget}}</div>
+
+                <div class='contactName'><span class='contactFirstName'>Type: {{proj.type}}</span> Number of Units:{{proj.units}}</div>
+
+                <div>Short Description: {{proj.short_desc}}</div>
+
             </div>
         </div>
     </div>
 
 
-    <div class='secondInfoBox'>
-        <div class='test'>
-            2nd info box
-        </div>
-    </div>
-
 
 
     <div class='mainLongDescBox'>
-        <div class='test longDescBox'>
-            Description Box
-        </div>
+            <div class='longDescBox'>
+                    Long Description: {{proj.long_desc}}
+             </div>
+     
 
         <div>
             <br>
         </div>
     </div>
 
-    
+
 
     <hr>
 
@@ -87,14 +76,14 @@
         <hr>
     </div>
 
-    
+
 
     <div class='projectDeleteBox'>
-            <div>
-                <!-- <a href="" class="deleteBidButton" ng-click="deleteProject(project)">Delete</a> -->
-                <button type="submit" class="deleteBidButton" ng-click="deleteProject(proj)" ui-sref="myProjects">Delete Project</button>
-            </div>
+        <div>
+            <!-- <a href="" class="deleteBidButton" ng-click="deleteProject(project)">Delete</a> -->
+            <button type="submit" class="deleteBidButton" ng-click="deleteProject(proj)" ui-sref="myProjects">Delete Project</button>
         </div>
+    </div>
 
     <!-- <button type="submit" class="deleteBidButton" ng-click="deleteBids(proj.projectid)" ui-sref="">Delete All Bids</button> -->
 
