@@ -6,7 +6,7 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
 
 
     projectService.projects().then(response => {
-        // console.log(response)
+        console.log(response)
         $scope.projects = response.data;
     })
 

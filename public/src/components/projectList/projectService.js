@@ -6,7 +6,7 @@ angular.module('myApp').service('projectService', function($http, $q){
     this.addProject = function(project, userid){
         // console.log(project)
         
-        return $http.post('/api/projects/createProject', [project.last_name, project.first_name, project.email, project.com_name, project.proj_address, project.state, project.zip, project.main_proj, project.budget, project.type, project.units, project.short_desc, project.long_desc, userid.userid])
+        return $http.post('/api/projects/createProject', [project.last_name, project.first_name, project.email, project.com_name, project.proj_address, project.state, project.zip, project.main_proj, project.budget, project.type, project.units, project.short_desc, project.long_desc, project.proj_name, userid.userid])
         then(response => response.data)
     }, 
 

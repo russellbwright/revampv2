@@ -1,20 +1,36 @@
-<div class="mainProjectBox">
+
+<div>
+    <div class='centerCenter singleProjectCompanyName'>Project List</div>
+    
+</div>
+<div class="topMargin mainProjectBox">
+
+    
+
     <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true ">
-        <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
+        <!-- <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a> -->
 
         <a ui-sref="singleProject({id:project.projectid})">
 
-            <div class="boldProject" ng-click="">
-                {{project.com_name}}
-            </div>
 
-            <div ng-click="">
-                Units: {{project.units}} - Budget: {{project.budget}}
-            </div>
+            <div class='sideMargin5 oneProjectListBox'>
+                <div class='projectListImgBox'>
+                    <img class="cabImg" ng-src="{{project.image_url}}">
+                </div>
 
-            <div ng-click="">
-                Desc: {{project.short_desc}}
-            </div>
+                <div class='marginleft3 projectListInfoBox'>
+
+                    <div class='paddingTop'>{{project.proj_name}}</div>
+                    <div>by:{{project.com_name}}</div>
+                    <div><br></div>
+                    <div>{{project.short_desc}}</div>
+                    <div><br></div>
+                    
+                    <div><p>{{project.state}}   {{project.main_proj}}</p></div>
+                    <div class='paddingBottom'><p>Units: {{project.units}}   Budget:{{project.budget}}</p> </div>
+                </div>
+            </div>    
+
         </a>
         <hr>
 
