@@ -27,9 +27,9 @@
                 <div class='addTitle'>
                     Project Info
                 </div>
-                <div class='contactName'><span class='contactFirstName'>Main Project: {{proj.main_proj}}</span> Budget: {{proj.budget}}</div>
+                <div class='contactName'><span class='contactFirstName'>Main Project: <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/>{{proj.main_proj}}</span> Budget: <img class="hammerIcon" ng-src='./src/img/moneypng.png'/>{{proj.budget}}</div>
 
-                <div class='contactName'><span class='contactFirstName'>Type: {{proj.type}}</span> Number of Units:{{proj.units}}</div>
+                <div class='contactName'><span class='contactFirstName'>Type: {{proj.type}}</span> Number of Units: <img class="hammerIcon" ng-src='./src/img/key2.png'/>{{proj.units}}</div>
 
                 <div>Short Description: {{proj.short_desc}}</div>
 
@@ -70,8 +70,8 @@
     <div ng-repeat="projectbids in myProjectBids" class='sideMargin mainViewProjects'>
         <a ui-sref="singleBid({id:projectbids.bidid})">
             <div class="centerCenter bidTitleText">{{projectbids.company_name}}</div>
-           Bid Alias: {{projectbids.bidname}} --- Bid Amount: {{projectbids.bid}} <br>
-           <div> {{projectbids.name}} {{projectbids.email}}</div>
+           Bid Alias: <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/> {{projectbids.bidname}} --- Bid Amount: <img class="hammerIcon" ng-src='./src/img/moneypng.png'/>{{projectbids.bid}} <br>
+           <div> <span class="bidTitleText">{{projectbids.name}}</span> --- Email: <img class="hammerIcon" ng-src='./src/img/email.jpg'/> {{projectbids.email}}</div>
            
            <div> <br> </div>
         </a>

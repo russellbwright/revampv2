@@ -6,7 +6,7 @@
     <hr>
 </div> -->
 
-<div ng-repeat="bids in myBids" class='sideMargin mainViewProjects'>
+<!-- <div ng-repeat="bids in myBids" class='sideMargin mainViewProjects'>
         <a ui-sref="singleBid({id:bids.bidid})">
             <div class="centerCenter bidTitleText">{{bids.company_name}}</div>
            Bid Alias: {{bids.bidname}} --- Bid Amount: {{bids.bid}} <br>
@@ -15,4 +15,15 @@
            <div> <br> </div>
         </a>
         <hr>
-    </div>
+    </div> -->
+
+    <div ng-repeat="bids in myBids" class='sideMargin mainViewProjects'>
+            <a ui-sref="singleBid({id:bids.bidid})">
+                <div class="centerCenter bidTitleText">{{bids.company_name}}</div>
+               Bid Alias: <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/> {{bids.bidname}} --- Bid Amount: <img class="hammerIcon" ng-src='./src/img/moneypng.png'/>{{bids.bid}} <br>
+               <div> <span class="bidTitleText">{{bids.name}}</span> --- Email: <img class="hammerIcon" ng-src='./src/img/email.jpg'/> {{bids.email}}</div>
+               
+               <div> <br> </div>
+            </a>
+            <hr>
+        </div>

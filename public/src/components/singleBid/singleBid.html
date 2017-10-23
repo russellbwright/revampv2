@@ -1,50 +1,113 @@
-<div class='singleProjectMainBox'>
-    
 
-
-    <div class='singleProjectTitleBox'>
+<div class='mainAddProjectBox'>
         
-        <div class='singleProjectCompanyName'>
-            {{bids.com_name}}
-            {{bids.bid}}
-            
-        </div>
-    </div>
-
-<div class='singleProjectBigTopBox'>    
-
-    <div class="mainImgDivBox">
         
-
-    </div>
-
-    <div class='mainInfoDivBox'>
-        <div class='test'>
-            BIDS
-        </div>
-    </div>
-</div>    
-
-
-    <div class='secondInfoBox'>
-        <div class='test'>
-            {{proj.com_name}}
-        </div>
-    </div>
-
-
-
-    <div class='mainLongDescBox'>
-        <div class='test longDescBox'>
-           BID Description Box
-        </div>
-
-        <div>
-            <br>
-        </div>
-    </div>    
-
-
+            <div class='singleProjectTitleBox'>
+        
+                <div class='addTitle '>
+                    <div>{{bids.com_name}} - {{bids.projectid}}</div>
+                </div>
+            </div>
+        
+            <div class='singleProjectBigTopBox'>
+        
+                <div class="centerCenter mainImgDivBox">
+        
+                    <div class='topAddImgBox'>
+                        <img ng-src="{{proj.image_url}}" class='cabImg'>
+                    </div>
+        
+                </div>
+        
+                <div class='mainInfoDivBox'>
+                    <div class='recentProjects centerCenter'>Contact Info </div>
+                    <div class='addTopMargin namesBox'>
+                        <div class='contactName'>
+                            <span class='contactFirstName'>Name: {{bids.first_name}} {{bids.last_name}}</span>
+                        </div>
+        
+                    </div>
+        
+                    <div>Email: <img class="hammerIcon" ng-src='./src/img/email.jpg'/> {{bids.email}}</div>
+                    <br>
+                    <div>Company Name: <img class="hammerIcon" ng-src='./src/img/black_house.png'/> {{bids.com_name}}</div>
+                    <br>
+        
+        
+                    <div>Project Address:<img class="googleMarker" ng-src='./src/img/googlemap_marker.png'/>{{bids.proj_address}}</div>
+        
+                    <div class='namesBox'>
+                        <div class='contactName'>{{bids.city}},&nbsp{{bids.state}}</span>&nbsp&nbsp&nbsp&nbsp Zip Code: {{bids.zip}}</div>
+        
+                    </div>
+        
+                    <!-- <div><input class='addTopMargin addProjectEmail contactEmail inputPadding' type="text" placeholder="Project Address*" required></div>
+                            
+                                        <div class='namesBox'>
+                                            <div class='contactName'><span class='contactFirstName'><input class='name inputPadding' type="text" placeholder="State*" required></span>
+                                            <input class='name inputPadding' type="text" placeholder="Zip Code*" required></div>
+                            
+                                        </div> -->
+        
+                </div>
+            </div>
+        
+        
+            <div class='secondInfoBox'>
+                <div class='addTitle'>
+                    Project Info
+                </div>
+                <div class='contactName'>
+                    <span class='contactFirstName'>Main Project: <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/>{{bids.main_proj}}</span>
+                    Budget: <img class="hammerIcon" ng-src='./src/img/moneypng.png'/>{{bids.budget}}</div>
+        
+                <div class='contactName '>
+                    <span class='contactFirstName'>Type:{{bids.type}}</span>
+                    Number of Units: <img class="hammerIcon" ng-src='./src/img/key2.png'/>{{bids.units}}</div>
+        
+                <div>Short Description: {{bids.short_desc}}</div>
+        
+            </div>
+        
+        
+        
+            <div class='mainLongDescBox'>
+                <div class='longDescBox'>
+                    Long Description: {{bids.long_desc}}
+                </div>
+        
+                <div>
+                    <br>
+                </div>
+            </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <hr>
+     <div class='sideMargin mainViewProjects'>
+            <div class='centerCenter'>
+               <a ui-sref="">
+                   <div class="centerCenter bidTitleText">{{bids.company_name}}</div>
+                  Bid Alias: <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/> {{bids.bidname}} --- Bid Amount: <img class="hammerIcon" ng-src='./src/img/moneypng.png'/>{{bids.bid}} <br>
+                  
+                  
+                  <div> <br> </div>
+               </a>
+            </div>
+               <hr>
+           
+           </div>
 
     <div class="mainInputBidBox">
         <div>

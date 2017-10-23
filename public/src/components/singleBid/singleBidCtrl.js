@@ -16,14 +16,14 @@ angular.module('myApp').controller('singleBidCtrl', function($scope, projectServ
     }
 
 
-    projectService.singleProject($stateParams.id).then(result => {
-        console.log(result.data)
-      $scope.proj = result.data[0];
+    // projectService.singleProject($stateParams.id).then(result => {
+    //     console.log(result.data)
+    //   $scope.proj = result.data[0];
       
              
                
       
-    })
+    // })
     
     
 })
