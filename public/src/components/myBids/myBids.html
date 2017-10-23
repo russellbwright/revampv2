@@ -1,7 +1,18 @@
-<div ng-repeat="bids in myBids" class='mainViewProjects'>
+<!-- <div ng-repeat="bids in myBids" class='mainViewProjects sideMargin'>
     <a ui-sref="singleBid({id:bids.bidid})">
    Company Name: {{bids.company_name}} --- Bid Amount: {{bids.bid}}
    <div> <br> </div>
 </a>
     <hr>
-</div>
+</div> -->
+
+<div ng-repeat="bids in myBids" class='sideMargin mainViewProjects'>
+        <a ui-sref="singleBid({id:bids.bidid})">
+            <div class="centerCenter bidTitleText">{{bids.company_name}}</div>
+           Bid Alias: {{bids.bidname}} --- Bid Amount: {{bids.bid}} <br>
+           <div> {{bids.name}} {{bids.email}}</div>
+           
+           <div> <br> </div>
+        </a>
+        <hr>
+    </div>

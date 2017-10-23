@@ -79,7 +79,7 @@ angular.module('myApp').service('projectService', function($http, $q){
 
     this.addBid = function(bid, userid, proid){
        
-       $http.post('/api/bids/newBid', [bid.company, bid.myBid, bid.email, bid.name, userid.userid, proid.projectid])
+       $http.post('/api/bids/newBid', [bid.company, bid.myBid, bid.email, bid.name, bid.bidname, userid.userid, proid.projectid])
     }
 
 
@@ -121,6 +121,9 @@ angular.module('myApp').service('projectService', function($http, $q){
         ///****************************** */
 
         
+
+
+      
     
 
 })

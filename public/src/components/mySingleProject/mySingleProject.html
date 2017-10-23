@@ -69,8 +69,10 @@
 
     <div ng-repeat="projectbids in myProjectBids" class='sideMargin mainViewProjects'>
         <a ui-sref="singleBid({id:projectbids.bidid})">
-           Company Name: {{projectbids.company_name}} --- Bid Amount: {{projectbids.bid}} <br>
-           ProjectId: {{projectbids.projectid}}
+            <div class="centerCenter bidTitleText">{{projectbids.company_name}}</div>
+           Bid Alias: {{projectbids.bidname}} --- Bid Amount: {{projectbids.bid}} <br>
+           <div> {{projectbids.name}} {{projectbids.email}}</div>
+           
            <div> <br> </div>
         </a>
         <hr>

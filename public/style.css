@@ -1048,7 +1048,11 @@ textarea{
 
 
 
-
+.bidTitleText{
+    font-size: 20;
+    color: black;
+    font-weight: bold;
+}
 
 /****************************************     Responsive         */
 @media (max-width: 360px){

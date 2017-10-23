@@ -111,6 +111,7 @@
                 <p class="learnMoreInfo bigInfoText homeQuote">EASY TO SUBMIT PROJECTS</p>
                 <p class="learnMoreInfo smallInfoText nameQuote">Finding someone to do work on your property with ease. Let us show you how to post.</p>
                 <button class='learnMore homeButton' ui-sref="managers">Learn More</button>
+                
             </div>
         </div>
 
@@ -123,7 +124,28 @@
         <div class=''>
             <p class="learnMoreInfo bigInfoText homeQuote">MONTHLY SUBSCRIPTION</p>
             <p class="subscription learnMoreInfo smallInfoText nameQuote ">List or Bid on all the projects you need. No Fees on top of the Subscription.</p>
-            <button class='learnMore subbutton homeButton'>Subscribe</button>
+            <!-- <form action="/charge" method="POST"> 
+                <script 
+                src="https://checkout.stripe.com/checkout.js" class="learnMore subbutton homeButton"
+                
+                data-key="pk_test_mfMDbJXgrrKr07MkBlj7pXan"
+                data-amount="100"
+                data-name="subscription"
+                data-description="this is for subscribing to revamp"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-currency="usd"
+                >
+                    
+                </script>
+
+            </form> -->
+
+
+            <button class='learnMore subbutton homeButton' ng-click="stripe()">Subscribe</button>
+
+            <!-- class='learnMore subbutton homeButton' -->
+
         </div>
     </div>
 

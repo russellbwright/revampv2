@@ -6,7 +6,7 @@ const session = require('express-session');
 const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
-const stripe = require('stripe')(pk_test_mfMDbJXgrrKr07MkBlj7pXan);
+const stripe = require('stripe')('sk_test_Q32LfkAIIjGXizGrArwOkSTS');
 
 const passport = require('passport');
 
@@ -217,6 +217,26 @@ app.get('/api/bids/myProjectBids/:id', projectCtrl.myProjectBids);
 app.post('/api/bids/deleteBids', projectCtrl.deleteBids)
 
 // app.get('/api/both/getBoth/:id', projectCtrl.getBoth)
+
+
+
+// app.post('/charge', function(req, res) {
+//   let token = req.body.stripeToken;
+//   let chargeAmount = req.body.chargeAmount;
+//   let charge = stripe.charges.create({
+//     amount: chargeAmount,
+//     currency: "usd",
+//     source: token
+//   }, function (err, charge){
+//     if(err & err.type === "StripeCardError"){
+//       console.log("Your card was declined");
+//     }
+//   });
+//   console.log("Your payment was successful")
+//   res.redirect('/myProfile');
+// })
+
+
 
 
 app.listen(port, () => {

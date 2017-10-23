@@ -25,6 +25,7 @@ angular.module('myApp').controller('homeCtrl', function($scope, $location, proje
         $location.path(path)
     }
 
+    
 
     // $scope.singleProject = (project) => {
         
