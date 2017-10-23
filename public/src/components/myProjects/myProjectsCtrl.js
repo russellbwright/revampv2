@@ -1,7 +1,7 @@
 angular.module('myApp').controller('myProjectsCtrl', function($scope, projectService, $state, user, $stateParams){
     
     projectService.myProjects(user).then(response => {
-        // console.log(response)
+        console.log(response)
         $scope.myProjects = response.data;
     })
 

@@ -1,1 +1,5 @@
-SELECT * FROM projects WHERE userid = $1;
+SELECT * FROM projects 
+FULL OUTER JOIN images ON projects.projectid = images.projectid
+where images.userid = $1;
+
+

@@ -56,7 +56,7 @@ module.exports = {
 
     myProjects: (req,res,next) => {
         const db = req.app.get('db');
-
+        console.log(req.body)
         db.my_projects(req.body).then(
             (response) => res.status(200).json(response) )
             .catch( ()=> res.status(500).json() )

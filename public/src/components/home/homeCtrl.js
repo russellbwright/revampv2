@@ -1,10 +1,11 @@
-angular.module('myApp').controller('homeCtrl', function($scope, $location, homeService, projectService, $state){
+angular.module('myApp').controller('homeCtrl', function($scope, $location, projectService, $state){
 
     // $scope.test = homeService.test;
 
    
 
     projectService.projects().then(results => {
+        console.log(results)
         $scope.projects = results.data;
     })
 

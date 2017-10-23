@@ -34,7 +34,7 @@ angular.module('myApp').controller('projectCtrl', function($scope, projectServic
     }
 
    
-
+    $scope.logout = projectService.logOut;
 
 
     

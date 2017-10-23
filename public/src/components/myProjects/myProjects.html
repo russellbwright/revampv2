@@ -1,4 +1,4 @@
-<div ng-repeat="project in myProjects" class='mainViewProjects'>
+<!-- <div ng-repeat="project in myProjects" class='mainViewProjects'>
     <a href="" class="deleteButton" ng-click="deleteProject(project)">X</a>
 
     <a ui-sref="mySingleProject({id:project.projectid})">
@@ -15,4 +15,37 @@
             Desc: {{project.short_desc}}
         </div>
     </a>
-</div>
+</div> -->
+
+
+
+
+
+<div class="mainViewProjects" ng-repeat="project in myProjects | orderBy: 'projectid':true ">
+       
+
+        <a class='projectListHover' ui-sref="mySingleProject({id:project.projectid})">
+
+
+            <div class='sideMargin  boxShadow oneProjectListBox'>
+                <div class='projectListImgBox'>
+                    <img class="cabImg" ng-src="{{project.image_url}}">
+                </div>
+
+                <div class='marginleft3 projectListInfoBox'>
+
+                    <div class='centerListTitle paddingTop'>{{project.proj_name}}</div>
+                    <div class='leftListCom'>  &nbsp&nbsp  by: {{project.com_name}}</div>
+                    <div><br></div>
+                    <div class='leftShortDesc'>{{project.short_desc}}</div>
+                    <div><br></div>
+                    
+                    <div ><p class='cityState'><img class="googleMarker" ng-src='./src/img/googlemap_marker.png'/>{{project.city}}, {{project.state}} &nbsp&nbsp <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/> {{project.main_proj}}</p></div>
+                    <div class='paddingBottom leftShortDesc'>Units: {{project.units}} &nbsp&nbsp&nbsp&nbsp  Budget: {{project.budget}} </div>
+                </div>
+            </div>    
+
+        </a>
+        <hr class='hrMargin'>
+
+    </div>      

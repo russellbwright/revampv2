@@ -6,6 +6,7 @@ const session = require('express-session');
 const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
+const stripe = require('stripe')(pk_test_mfMDbJXgrrKr07MkBlj7pXan);
 
 const passport = require('passport');
 

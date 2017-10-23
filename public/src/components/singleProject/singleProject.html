@@ -70,87 +70,87 @@
 
 
 
- <div class='mainAddProjectBox'>
-        
-        
-            <div class='singleProjectTitleBox'>
-        
-                <div class='addTitle '>
-                    <div>{{proj.com_name}}-{{proj.projectid}}</div>
-                </div>
+<div class='mainAddProjectBox'>
+
+
+    <div class='singleProjectTitleBox'>
+
+        <div class='addTitle '>
+            <div>{{proj.com_name}} - {{proj.projectid}}</div>
+        </div>
+    </div>
+
+    <div class='singleProjectBigTopBox'>
+
+        <div class="centerCenter mainImgDivBox">
+
+            <div class='topAddImgBox'>
+                <img ng-src="{{proj.image_url}}" class='cabImg'>
             </div>
-        
-            <div class='singleProjectBigTopBox'>
-        
-                <div class="centerCenter mainImgDivBox">
-                    
-                        <div class='topAddImgBox'>
-                                <img ng-src="{{proj.image_url}}" class='cabImg'>
-                        </div>
-                   
-                 </div>
-        
-                <div class='addBackgroundColor mainInfoDivBox'>
-                    <div class='addTopMargin2 contactUsBox addSubmit'>
-                        Company Info
-                    </div>
-                    <div class='addTopMargin namesBox'>
-                        <div class='contactName'><span class='contactFirstName'>First Name:{{proj.first_name}}</span>
-                           Last Name: {{proj.last_name}}</div>
-        
-                    </div>
-        
-                    <div>Email: {{proj.email}}</div>
-        
-                    <div>Company Name:{{proj.com_name}}</div>
-        
-        
-        
-                    <div>Project Address:{{proj.proj_address}}</div>
-        
-                    <div class='namesBox'>
-                        <div class='contactName'>State:{{proj.state}}</span>
-                           Zip Code: {{proj.zip}}</div>
-        
-                    </div>
-        
-                    <!-- <div><input class='addTopMargin addProjectEmail contactEmail inputPadding' type="text" placeholder="Project Address*" required></div>
+
+        </div>
+
+        <div class='mainInfoDivBox'>
+            <div class='recentProjects centerCenter'>Contact Info </div>
+            <div class='addTopMargin namesBox'>
+                <div class='contactName'>
+                    <span class='contactFirstName'>Name: {{proj.first_name}} {{proj.last_name}}</span>
+                </div>
+
+            </div>
+
+            <div>Email: &nbsp{{proj.email}}</div>
+            <br>
+            <div>Company Name: {{proj.com_name}}</div>
+            <br>
+
+
+            <div>Project Address: {{proj.proj_address}}</div>
+
+            <div class='namesBox'>
+                <div class='contactName'>{{proj.city}}&nbsp {{proj.state}}</span>&nbsp&nbsp&nbsp&nbsp Zip Code: {{proj.zip}}</div>
+
+            </div>
+
+            <!-- <div><input class='addTopMargin addProjectEmail contactEmail inputPadding' type="text" placeholder="Project Address*" required></div>
                     
                                 <div class='namesBox'>
                                     <div class='contactName'><span class='contactFirstName'><input class='name inputPadding' type="text" placeholder="State*" required></span>
                                     <input class='name inputPadding' type="text" placeholder="Zip Code*" required></div>
                     
                                 </div> -->
-        
-                </div>
-            </div>
-        
-        
-            <div class='secondInfoBox'>
-                <div class='addTitle'>
-                    Project Info
-                </div>
-                <div class='contactName'><span class='contactFirstName'>Main Project: {{proj.main_proj}}</span>
-                   Budget: {{proj.budget}}</div>
-        
-                <div class='contactName'><span class='contactFirstName'>Type: {{proj.type}}</span>
-                    Number of Units:{{proj.units}}</div>
-        
-                <div>Short Description: {{proj.short_desc}}</div>        
-        
-            </div>
-        
-        
-        
-            <div class='mainLongDescBox'>
-                <div class='longDescBox'>
-                       Long Description: {{proj.long_desc}}
-                </div>
-        
-                <div>
-                    <br>
-                </div>
-            </div>
+
+        </div>
+    </div>
+
+
+    <div class='secondInfoBox'>
+        <div class='addTitle'>
+            Project Info
+        </div>
+        <div class='contactName'>
+            <span class='contactFirstName'>Main Project: {{proj.main_proj}}</span>
+            Budget: {{proj.budget}}</div>
+
+        <div class='contactName '>
+            <span class='contactFirstName'>Type:{{proj.type}}</span>
+            Number of Units:{{proj.units}}</div>
+
+        <div>Short Description: {{proj.short_desc}}</div>
+
+    </div>
+
+
+
+    <div class='mainLongDescBox'>
+        <div class='longDescBox'>
+            Long Description: {{proj.long_desc}}
+        </div>
+
+        <div>
+            <br>
+        </div>
+    </div>
 
 
 
@@ -166,19 +166,24 @@
 
 
     <hr>
-        <form>
-                    <div class="mainInputBidBox">
-            
-                <div>
-                        <input ng-model="bid.myBid" type='text'  placeholder="Bid" class='addInput' required/>  
-                        <input ng-model="bid.company" type='text'  placeholder="Company Name" class='addInput' required/>
-                </div>
-                
-                <div>
-                        <button type="submit" class="bidButton" ng-click="addBid(bid, proj)" >Add Bid</button>
-                </div>
+    <form>
+        <div class="mainInputBidBox">
 
-                    </div>
+            <div>
+                <input ng-model="bid.myBid" type='text' placeholder="Bid" class='addInput' required/>
+                <input ng-model="bid.company" type='text' placeholder="Company Name" class='addInput' required/>
+                <div>
+                    <input ng-model="bid.name" type='text' placeholder="Name" class='addInput' required/>
+                    <input ng-model="bid.email" type='text' placeholder="Email" class='addInput' required/> </div>
 
-        </form>    
+                <div class='centerCenter'>
+                    <button type="submit" class="bidButton" ng-click="addBid(bid, proj)">Add Bid</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </form>
 </div>

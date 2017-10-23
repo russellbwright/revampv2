@@ -28,6 +28,44 @@
     <div class="homeButtonBox"> <button class='homeButton' ui-sref="addProject">Add a Project</button><button class='homeButton homebidbutton' ui-sref="projects">Place a Bid</button></div>
 
 
+        <div class='centerCenter'><div class='recentProjects'>   Recent Projects</div></div>
+        <br>
+
+
+
+    <div class="mainViewProjects" ng-repeat="project in projects | orderBy: 'projectid':true | limitTo:2 ">
+            
+     
+             <a class='projectListHover' ui-sref="mySingleProject({id:project.projectid})">
+     
+     
+                 <div class='sideMargin  boxShadow oneProjectListBox'>
+                     <div class='projectListImgBox'>
+                         <img class="cabImg" ng-src="{{project.image_url}}">
+                     </div>
+     
+                     <div class='marginleft3 projectListInfoBox'>
+     
+                         <div class='centerListTitle paddingTop'>{{project.proj_name}}</div>
+                         <div class='leftListCom'>  &nbsp&nbsp  by: {{project.com_name}}</div>
+                         <div><br></div>
+                         <div class='leftShortDesc'>{{project.short_desc}}</div>
+                         <div><br></div>
+                         
+                         <div ><p class='cityState'><img class="googleMarker" ng-src='./src/img/googlemap_marker.png'/>{{project.city}}, {{project.state}} &nbsp&nbsp <img class="hammerIcon" ng-src='./src/img/hammer_icon.png'/> {{project.main_proj}}</p></div>
+                         <div class='paddingBottom leftShortDesc'>Units: {{project.units}} &nbsp&nbsp&nbsp&nbsp  Budget: {{project.budget}} </div>
+                     </div>
+                 </div>    
+     
+             </a>
+             <hr class='hrMargin'>
+     
+         </div> 
+
+
+
+
+
     <div class='mainHomeImgBox'>
         <div class='cabImgBox'>
             <img class='cabImg' src="./src/img/Homepage-image.jpg" alt="">

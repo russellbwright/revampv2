@@ -6,7 +6,7 @@ angular.module('myApp').service('projectService', function($http, $q){
     this.addProject = function(project, userid){
         // console.log(project)
         
-        return $http.post('/api/projects/createProject', [project.last_name, project.first_name, project.email, project.com_name, project.proj_address, project.state, project.zip, project.main_proj, project.budget, project.type, project.units, project.short_desc, project.long_desc, project.proj_name, userid.userid])
+        return $http.post('/api/projects/createProject', [project.last_name, project.first_name, project.email, project.com_name, project.proj_address, project.state, project.zip, project.main_proj, project.budget, project.type, project.units, project.short_desc, project.long_desc, project.proj_name, project.city, userid.userid])
         then(response => response.data)
     }, 
 
@@ -79,7 +79,7 @@ angular.module('myApp').service('projectService', function($http, $q){
 
     this.addBid = function(bid, userid, proid){
        
-       $http.post('/api/bids/newBid', [bid.company, bid.myBid, userid.userid, proid.projectid])
+       $http.post('/api/bids/newBid', [bid.company, bid.myBid, bid.email, bid.name, userid.userid, proid.projectid])
     }
 
 
@@ -100,9 +100,9 @@ angular.module('myApp').service('projectService', function($http, $q){
     return $http.post('/api/login', user)
         .then((res)=>{
         if (!res.data.user){
-            return 'Either Username or Password are wrong';
+            return false;
         }
-          console.log(res.data.user)
+          
           return res.data.user;                
         });
   }
@@ -120,13 +120,7 @@ angular.module('myApp').service('projectService', function($http, $q){
 
         ///****************************** */
 
-        let currentTitle = 'Welcome';
-        this.getTitle = function () {
-          return currentTitle;
-        };
-        this.setTitle = (newTitle) => {
-          currentTitle = newTitle;
-        };
+        
     
 
 })

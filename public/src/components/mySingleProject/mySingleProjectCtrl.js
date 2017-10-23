@@ -11,7 +11,7 @@ angular.module('myApp').controller('mySingleProjectCtrl', function($scope, proje
 
 
         projectService.myProjectBids($stateParams.id).then(response => {
-            // console.log(response)
+            console.log(response)
             
         $scope.myProjectBids = response.data;
         })

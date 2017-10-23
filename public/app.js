@@ -15,8 +15,15 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         .state('login', {
             url:'/login',
             templateUrl:"./src/components/login/login.html",
-            controller:"loginCtrl"
+            controller:"loginCtrl",
+            resolve: {
+                user: projectService => projectService.getUser()
+                    .then(response => 
+                        response.data)
+                    .catch(err => err)
+            }
         })
+        
 
         .state('projects', {
             url:'/projectslist',

@@ -8,7 +8,7 @@ angular.module('myApp').controller('addProjectCtrl', function($scope, projectSer
         .then(response => {
 
             projectService.uploadImage(image, response.data[0], user)
-            $state.go('myProfile');
+            $state.go('myProjects');
             
         })
     }
