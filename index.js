@@ -245,7 +245,7 @@ app.post('/api/bids/deleteBids', projectCtrl.deleteBids)
 
 
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(process.env.PORT, () => {
     console.log("hey this is working")
 })
 
