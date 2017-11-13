@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require('express');
 const massive = require('massive');
 const bodyParser = require('body-parser');
@@ -7,18 +9,22 @@ const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const stripe = require('stripe')('sk_test_Q32LfkAIIjGXizGrArwOkSTS');
+// const { address } = require('./config');
+
 
 const passport = require('passport');
 
 
-const { secret } = require('../config').session;
-const {dbUser, database, dbpass} = require('../config').db;
-const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
+const { secret } = require('./config').session;
+// const {dbUser, database, dbpass} = require('../config').db;
+// const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
+// const connectionString = `${ address }`
 
 
 // `postgres://scvcufkjhdxfgv:5990cf15c8cec4a552fad7837fcc6223f8c5769a27615d3a0c76d950b9d41b16@ec2-54-235-250-15.compute-1.amazonaws.com:5432/d1onp08fd6dfr6?ssl=true`
 
-const port = 3000;
+// const port = process.env.port;
+// const port = 3000;
 const app = express();
 
 
@@ -29,7 +35,7 @@ app.use(bodyParser.json());
 // };
 
 app.use(cors());
-app.use(express.static(`${__dirname}/../public`));
+app.use(express.static(`${__dirname}/./public`));
 
 
 
@@ -174,7 +180,7 @@ app.get('/logout', (req, res, next)=>{
 
 //******* DB Connection *******//
 
-const massiveConnection = massive(connectionString)
+const massiveConnection = massive(process.env.HEROKU_POSTGRESQL_URL)
 .then(db => {
     app.set('db', db);
 })
@@ -183,8 +189,8 @@ const massiveConnection = massive(connectionString)
 });
 
 
-const usersCtrl = require('./usersCtrl');
-const projectCtrl = require('./projectCtrl');
+const usersCtrl = require('./server/usersCtrl');
+const projectCtrl = require('./server/projectCtrl');
 
 
 //*********************** */
@@ -239,6 +245,7 @@ app.post('/api/bids/deleteBids', projectCtrl.deleteBids)
 
 
 
-app.listen(port, () => {
-    console.log(`Listening on port: ${port}`)
+app.listen(process.env.PORT, () => {
+    console.log("hey this is working")
 })
+
