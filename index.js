@@ -1,4 +1,3 @@
-const config = require('./config')
 
 require("dotenv").config();
 
@@ -17,7 +16,7 @@ const stripe = require('stripe')('sk_test_Q32LfkAIIjGXizGrArwOkSTS');
 const passport = require('passport');
 
 
-const { secret } = require('./config').session;
+const { secret } = require('./configs').session;
 // const {dbUser, database, dbpass} = require('../config').db;
 // const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
 // const connectionString = `${ address }`
