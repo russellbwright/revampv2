@@ -16,7 +16,7 @@ const stripe = require('stripe')('sk_test_Q32LfkAIIjGXizGrArwOkSTS');
 const passport = require('passport');
 
 
-const { secret } = require('./configs').session;
+const { secret } = require('./Configs').session;
 // require("dotenv").session;
 // const {dbUser, database, dbpass} = require('../config').db;
 // const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
@@ -30,6 +30,8 @@ const { secret } = require('./configs').session;
 const app = express();
 
 
+//******* DB Connection *******//
+
 
 const massiveConnection = massive(process.env.HEROKU_POSTGRESQL_URL)
 .then(db => {
@@ -39,6 +41,9 @@ const massiveConnection = massive(process.env.HEROKU_POSTGRESQL_URL)
     console.log(err);
 });
 
+
+const usersCtrl = require('./server/usersCtrl');
+const projectCtrl = require('./server/projectCtrl');
 
 
 
@@ -83,58 +88,6 @@ passport.serializeUser((user, done) => {
   });
 
   
-
-//   passport.use(new LocalStrategy(function (username, password, done) {
-//     const db = app.get('db')
-    
-//     db.run('select * from users where username = $1', [username]).then(user=> {
-//     if (!user) {
-//       return done(null, false);
-//     }
-    
-//     const authenticated = bcrypt.compareSync(password, user.password);
-
-//     if (!authenticated) {
-//       return done(null, false);
-//     }
-//     return done(null, user);
-    
-//   });
-// }));
-
-
-
-
-
-  //************************************************* */
-  //******* AUTH ENDPOINTS */
-
-
-
-  
-//   app.post('/auth/register', (req, res) => {
-//     const db = req.app.get('db');
-//     console.log(req.body)
-//     bcrypt.hash(req.body.password, 10).then((hash) => {
-//       db
-//         .add_user([req.body.username, hash])
-//         .then(() => passport.authenticate('local'))
-//         .then(() => res.send(req.session));
-//     });
-//   });
-
-
-
-  
-//   app.get('/auth/logout', (req, res) => {
-//     req.logout();
-//     res.json('ok');
-//   });
-  
-
-
-
-
 
 
 
@@ -194,13 +147,6 @@ app.get('/logout', (req, res, next)=>{
 
 
 
-//******* DB Connection *******//
-
-
-
-
-const usersCtrl = require('./server/usersCtrl');
-const projectCtrl = require('./server/projectCtrl');
 
 
 //*********************** */
