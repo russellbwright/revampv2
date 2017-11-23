@@ -25,6 +25,7 @@ const passport = require('passport');
 
 
 
+
 // const port = process.env.port;
 // const port = 3000;
 const app = express();
@@ -56,7 +57,7 @@ app.use(bodyParser.json());
 // };
 
 app.use(cors());
-app.use(express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/public'));
 
 
 
