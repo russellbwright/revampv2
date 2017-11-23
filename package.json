@@ -32,5 +32,8 @@
     "url": "https://github.com/russellbwright/revamp/issues"
   },
   "homepage": "https://github.com/russellbwright/revamp#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
 }
