@@ -30,6 +30,20 @@ require("dotenv").session;
 const app = express();
 
 
+
+const massiveConnection = massive(process.env.HEROKU_POSTGRESQL_URL)
+.then(db => {
+    app.set('db', db);
+})
+.catch(err => {
+    console.log(err);
+});
+
+
+
+
+
+
 //middlewares
 app.use(bodyParser.json());
 // var corsOptions = {
@@ -182,13 +196,7 @@ app.get('/logout', (req, res, next)=>{
 
 //******* DB Connection *******//
 
-const massiveConnection = massive(process.env.HEROKU_POSTGRESQL_URL)
-.then(db => {
-    app.set('db', db);
-})
-.catch(err => {
-    console.log(err);
-});
+
 
 
 const usersCtrl = require('./server/usersCtrl');
