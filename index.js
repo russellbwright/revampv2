@@ -33,8 +33,8 @@ const app = express();
 
 //******* DB Connection *******//
 
-
-const massiveConnection = massive(process.env.HEROKU_POSTGRESQL_URL)
+// const massiveConnection = 
+massive(process.env.HEROKU_POSTGRESQL_URL)
 .then(db => {
     app.set('db', db);
 })
