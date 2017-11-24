@@ -67,7 +67,7 @@ app.use('/', express.static(__dirname + '/public'));
 
 
 app.use(session({
-    secret: process.env.SESSION,
+    secret: 'mysecret',
     saveUninitialized: true,
     resave: true
   }));
