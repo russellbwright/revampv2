@@ -11,7 +11,7 @@ const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const stripe = require('stripe')('sk_test_Q32LfkAIIjGXizGrArwOkSTS');
 // const { address } = require('./config');
-
+const cookie = require('cookie-session');
 
 const passport = require('passport');
 
@@ -66,10 +66,14 @@ app.use('/', express.static(__dirname + '/public'));
 
 
 
-app.use(session({
-    secret: 'mysecret',
+app.use(cookie({
+    cookie:{
+        secure: true,
+        maxAge:60000
+           },
+    secret: 'supersecret',
     saveUninitialized: true,
-    resave: true
+    resave: false
   }));
 
 
