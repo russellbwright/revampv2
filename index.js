@@ -10,7 +10,7 @@ const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const stripe = require('stripe')('sk_test_Q32LfkAIIjGXizGrArwOkSTS');
-// const { address } = require('./config');
+const { address } = require('./configs').db;
 const cookie = require('cookie-session');
 
 const passport = require('passport');
@@ -20,21 +20,21 @@ const passport = require('passport');
 // require("dotenv").session;
 // const {dbUser, database, dbpass} = require('../config').db;
 // const connectionString = `postgres://${dbUser}:${dbpass}@localhost/${database}`
-// const connectionString = `${ address }`
+const connectionString = `${ address }`
 
 
 
 
 
 // const port = process.env.port;
-// const port = 3000;
+const port = 80;
 const app = express();
 
 
 //******* DB Connection *******//
 
 // const massiveConnection = 
-massive(process.env.HEROKU_POSTGRESQL_URL)
+massive(connectionString)
 .then(db => {
     app.set('db', db);
 })
@@ -206,7 +206,7 @@ app.post('/api/bids/deleteBids', projectCtrl.deleteBids)
 
 
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
     console.log("hey this is working")
 })
 
