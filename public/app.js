@@ -1,7 +1,7 @@
 angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('home',{
-            url:'/home',
+            url:'/',
             templateUrl:"./src/components/home/home.html",
             controller:"homeCtrl",
             resolve: {
@@ -13,7 +13,7 @@ angular.module('myApp', ['ui.router', 'ngFileUpload']).config(function($statePro
         })
 
         .state('login', {
-            url:'/',
+            url:'/login',
             templateUrl:"./src/components/login/login.html",
             controller:"loginCtrl",
             resolve: {
