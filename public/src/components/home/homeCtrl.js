@@ -1,6 +1,6 @@
 angular.module('myApp').controller('homeCtrl', function($scope, $location, projectService, $state){
 
-    // $scope.test = homeService.test;
+    
 
    
 
@@ -25,21 +25,7 @@ angular.module('myApp').controller('homeCtrl', function($scope, $location, proje
         $location.path(path)
     }
 
-    
 
-    // $scope.singleProject = (project) => {
-        
-    //     projectService.singleProject(project).then(response => {
-    //         console.log(response.data[0])
-    //         return proj = response.data[0];
-        
-    //     })
-
-    //    }
-
-    //    projectService.singleProject(project).then(response => {
-    //        return $scope.proj = reponse.data[0];
-    //    })
 
       $scope.test = 'yabad'; 
 
