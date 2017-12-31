@@ -96,24 +96,46 @@
 
     <hr>
     <form>
-        <div class="mainInputBidBox">
+        
             
-            <div>
-                <input ng-model="bid.bidname" type='text' placeholder="Bid Name" class='addInput centerCenter' required/>
-                <input ng-model="bid.myBid" type='text' placeholder="Bid" class='addInput' required/>
-                <input ng-model="bid.company" type='text' placeholder="Company Name" class='addInput' required/>
-                <div>
-                    <input ng-model="bid.name" type='text' placeholder="Name" class='addInput' required/>
-                    <input ng-model="bid.email" type='text' placeholder="Email" class='addInput' required/> </div>
+            <div class="border-main-input-box">  
+                    <div class="margin-fix"> 
+                        <div class='contactName'>
+                            <span class='contactFirstName'>
+                                <input ng-model="bid.bidname" type='text' placeholder="Bid Name" class='addProjAll addProjectShortArea name inputPadding' required/>
+                            </span>
+                        </div>
+                
+                
+                        <div class='contactName'>
+                            <span class='contactFirstName'>
+                                <input ng-model="bid.myBid" type='text' placeholder="Bid" class='addProjAll name inputPadding' required/>
+                            </span>
+                                <input ng-model="bid.company" type='text' placeholder="Company Name" class='addProjAll name inputPadding' required/>    
+                        </div>
+                
+                        <div class='contactName'>
+                            <span class='contactFirstName'>
+                                <input ng-model="bid.name" type='text' placeholder="Name" class='addProjAll name inputPadding' required/>
+                            </span>
+                                <input ng-model="bid.email" type='text' placeholder="Email" class='addProjAll name inputPadding' required/>
+                        </div>
+                
+                    </div>         
+                
+                    
 
-                <div class='centerCenter'>
+                <div class='centerCenter margin-bot-2'>
                     <button type="submit" class="bidButton" ng-click="addBid(bid, proj)" ui-sref='myBids'>Add Bid</button>
                 </div>
-            </div>
+
+            </div>  
 
 
 
-        </div>
+        
 
     </form>
+
+   
 </div>

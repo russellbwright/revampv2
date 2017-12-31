@@ -1054,6 +1054,28 @@ textarea{
     font-weight: bold;
 }
 
+.margin-fix {
+    margin-top:1%;
+    margin-left:1%;
+}
+
+.margin-bot-2 {
+    margin-bottom: 2%;
+}
+
+/*********************************************** new style */
+
+.border-main-input-box{
+    border: 2px solid black;
+    width:86%;
+    height: 100%;
+    margin-bottom: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+
+
 /****************************************     Responsive         */
 @media (max-width: 360px){
     .navList {

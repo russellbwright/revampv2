@@ -27,7 +27,7 @@ const connectionString = `${ address }`
 
 
 // const port = process.env.port;
-const port = 80;
+const port = process.env.port || 4000;
 const app = express();
 
 
@@ -207,6 +207,12 @@ app.post('/api/bids/deleteBids', projectCtrl.deleteBids)
 
 
 app.listen(port, () => {
-    console.log("hey this is working")
+    console.log(`This is running on port ${port}`)
+
+
+
+
+
+    
 })
 
